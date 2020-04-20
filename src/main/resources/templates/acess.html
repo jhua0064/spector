@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Password</label>
+<input type="text" id="pwd">
+
+<button onclick="goHome()">go to website</button>
+
+<script>
+    function goHome() {
+        var pwd = document.getElementById("pwd").value;
+
+        if(pwd == "E12"){
+            window.location.href = "/?pwd=E12";
+        }else{
+            alert("Incorrect Password!")
+        }
+    }
+</script>
+</body>
+</html>
