@@ -36,7 +36,10 @@ public class HomeController {
     }
 
     @RequestMapping("/plants")
-    public String viewPlants(){
+    public String viewPlants(Model model){
+        List<Student> students = studentService.listAll();
+        String s = new Gson().toJson(students);
+        model.addAttribute("students",s);
         return "gallery";
     }
 

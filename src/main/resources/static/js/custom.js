@@ -62,11 +62,29 @@
 	   ................................................. */
 
 	var Container = $('.container');
+	//store all filters
+	var filters = {};
+
+	function contactVaue(objArr){
+		var value = '';
+		for(var prop in objArr){
+			value += objArr[prop];
+		}
+		return value;
+	};
+
 	Container.imagesLoaded(function() {
 		var portfolio = $('.special-menu');
-		portfolio.on('click', 'button', function() {
+		portfolio.on('click', 'button', function(e) {
 			$(this).addClass('active').siblings().removeClass('active');
-			var filterValue = $(this).attr('data-filter');
+			var btn = $(e.currentTarget);
+			//get group key
+			var btnGroup = btn.parents('.button-group');
+			var filterGroup = btnGroup.attr('data-filter-group');
+			//add filter
+			filters[filterGroup] = btn.attr('data-filter');
+
+			var filterValue = contactVaue(filters);
 			$grid.isotope({
 				filter: filterValue
 			});
