@@ -21,8 +21,6 @@ import java.util.List;
 @Controller
 public class HomeController {
 
-    @Autowired
-    private StudentService studentService;
 
     @RequestMapping("/access")
     public String checkAccess(){
@@ -35,13 +33,6 @@ public class HomeController {
         return "index";
     }
 
-    @RequestMapping("/plants")
-    public String viewPlants(Model model){
-        List<Student> students = studentService.listAll();
-        String s = new Gson().toJson(students);
-        model.addAttribute("students",s);
-        return "gallery";
-    }
 
     @RequestMapping("/about")
     public String aboutPage(){

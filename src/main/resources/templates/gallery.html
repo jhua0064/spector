@@ -201,7 +201,7 @@
             </div>
 
             <div class="row special-list">
-                <div class="col-lg-3 col-md-6 special-grid blue 1">
+                <!--<div class="col-lg-3 col-md-6 special-grid blue 1">
                     <div class="products-single fix">
                         <div class="box-img-hover">
                             <div class="type-lb" hidden="hidden">
@@ -210,8 +210,7 @@
                             <img src="/images/gallery-img-01.jpg" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="view guide"><i class="fas fa-eye"></i></a></li>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                    <li><a href="/detail/1" data-toggle="tooltip" data-placement="right" title="view guide"><i class="fas fa-eye"></i></a></li>
                                     <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                 </ul>
                                 <a class="cart" href="#">Lavendula</a>
@@ -393,7 +392,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
 
             </div>
@@ -604,22 +603,29 @@
         $(function () {
             let msg = "[[${students}]]";
             let students = $.parseJSON(msg.replace(/&quot;/g,'"'));
-            let flowers = [{"id":1,"name":"a","color":"red","season":[1,2,3], "url":"/images/gallery-img-01.jpg"},
-                          {"id":2,"name":"b","color":"blue","season":[1,2,4],"url":"/images/gallery-img-02.jpg"},
-                        {"id":3,"name":"c","color":"white","season":[4,2,3],"url":"/images/gallery-img-03.jpg"},
-                        {"id":4,"name":"d","color":"yellow","season":[3,2,4], "url":"/images/gallery-img-04.jpg"},
-                        {"id":5,"name":"e","color":"red","season":[1,2],"url":"/images/gallery-img-05.jpg"},
-                        {"id":6,"name":"f","color":"blue","season":[2,4], "url":"/images/gallery-img-07.jpg"},
+            let flowers = [
+                {"id":1,"type":"herb","name":"Lavendula","color":"purple","season":[1,2,3], "url":"/images/gallery-img-01.jpg"},
+                {"id":2,"type":"shrub","name":"Blueberry","color":"blue","season":[1,2,4],"url":"/images/gallery-img-02.jpg"},
+                {"id":3,"type":"herb","name":"Rosmarinus","color":"blue","season":[4,2,3],"url":"/images/gallery-img-03.jpg"},
+                {"id":4,"type":"tree","name":"Melaleuca","color":"red","season":[3,2,4], "url":"/images/gallery-img-04.jpg"},
+                {"id":5,"type":"shrub","name":"Yellow mallee","color":"yellow","season":[5,6,7],"url":"/images/gallery-img-05.jpg"},
+                {"id":6,"type":"herb","name":"Catmint","color":"blue","season":[2,4,8], "url":"/images/gallery-img-06.jpeg"},
+                {"id":7,"type":"herb","name":"Cornflower","color":"blue","season":[5,7,9], "url":"/images/gallery-img-08.jpg"},
+                {"id":8,"type":"herb","name":"Forget-me-not","color":"blue","season":[4,10,11], "url":"/images/gallery-img-09.jpg"},
+                {"id":9,"type":"shrub","name":"Snowberry","color":"white","season":[10,11,12], "url":"/images/gallery-img-10.jpg"},
+                {"id":10,"type":"shrub","name":"Chrysanthus","color":"yellow","season":[5,9,10], "url":"/images/gallery-img-11.jpg"},
+                {"id":11,"type":"shrub","name":"Bursaria","color":"white","season":[11,12], "url":"/images/gallery-img-12.jpg"},
+                {"id":12,"type":"herb","name":"Cichorium","color":"blue","season":[7,8,9], "url":"/images/gallery-img-07.jpg"},
                             ]
 
             function createDiv(flower) {
                 $('.special-list').append('<div class="col-lg-3 col-md-6 special-grid" id='+ flower.id +'>\n' +
                     '                    <div class="products-single fix">\n' +
                     '                        <div class="box-img-hover">\n' +
-                    '                            <img src='+ flower.url +' class="img-fluid" alt="Image">\n' +
+                    '                            <img src='+ flower.url +' class="img-fluid" width="255" height="170" alt="Image">\n' +
                     '                            <div class="mask-icon">\n' +
                     '                                <ul>\n' +
-                    '                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="view guide"><i class="fas fa-eye"></i></a></li>\n' +
+                    '                                    <li><a href="/detail/'+flower.id +'" data-toggle="tooltip" data-placement="right" title="view guide"><i class="fas fa-eye"></i></a></li>\n' +
                     '                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>\n' +
                     '                                </ul>\n' +
                     '                                <a class="cart" href="#">'+ flower.name +'</a>\n' +
@@ -628,7 +634,7 @@
                     '                    </div>\n' +
                     '                </div>');
 
-                $('#'+flower.id).addClass(flower.color);
+                $('#'+flower.id).addClass(flower.color).addClass(flower.type);
                 var season = flower.season;
                 
                 for(var i in season){
