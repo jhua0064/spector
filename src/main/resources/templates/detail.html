@@ -162,38 +162,49 @@
                 <div class="col-lg-3 col-md-6 special-grid">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img class="img-fluid" width="255" height="170" alt="Image">
-                           <!-- <div class="mask-icon">
-                                <ul>
-                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                                <a class="cart" href="#">Lavendula</a>
-                            </div>-->
+                            <img th:src="${plant.getImgLink()}" class="img-fluid" width="255" height="170" alt="Image">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 special-grid">
                     <div class="products-single fix ">
                             <p>
-                                <label>Botanical Name:</label> <span th:text="${id}"/> <br>
-                                <label>Common Name:</label> <span></span> <br>
-                                <label>Botanical Name:</label> <span></span> <br>
+                                <label class = "guide-title">Botanical Name:</label> <span th:text="${plant.getbName()}"/> <br>
+                                <label class = "guide-title">Common Name:</label> <span th:text="${plant.getcName()}"></span> <br>
+                                <label class = "guide-title">Flowering Months:</label> <span th:text="${plant.season}"></span> <br>
                             </p>
                     </div>
                 </div>
             </div>
-
-            <div class="row special-list">
-                <p>
-                    <label>Water Level:</label> <span th:text="${id}"/> <br>
-                    <label>Light Level:</label> <span></span> <br>
-                    <label>Soil Type:</label> <span></span> <br>
-                    <label>Maintenance:</label> <span></span> <br>
-                </p>
-            </div>
         </div>
     </div>
     <!-- End Gallery  -->
+
+    <!-- Start Guide  -->
+    <div class="products-box" style="padding: 0">
+        <div class="container">
+            <div class="row special-list">
+                <div class="special-grid" >
+                    <div class="products-single fix">
+                        <p>
+                            <label class="guide-title">Water Level:</label> <span th:text="${guide.getWaterNeed()}"/> <br>
+                            <label class = "guide-title">Light Level:</label> <span th:text="${guide.getLightNeed()}"></span> <br>
+                            <label class = "guide-title">Soil Type:</label> <span th:text="${guide.getSoilType()}"></span> <br>
+                            <label class = "guide-title">Soil Addition:</label> <span th:text="${guide.getSoilAdd()}"></span> <br>
+                            <label class = "guide-title">Height Range:</label> <span th:text="${guide.gethRange()}"></span> <br>
+                            <label class = "guide-title">Spread Range:</label> <span th:text="${guide.getsRange()}"></span> <br>
+                            <label class = "guide-title">Climate:</label> <span th:text="${guide.getClimate()}"></span> <br>
+                            <label class = "guide-title">Maintenance:</label> <span th:text="${guide.getMaintenance()}"></span> <br>
+                            <label class = "guide-title">Smell:</label> <span th:text="${guide.getSmell()}"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End Guide  -->
+
 
     <!-- Start Products  -->
     <div class="products-box">
@@ -201,7 +212,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
-                        <h1>Find wild <span th:text="${id}"/>'s location</h1>
+                        <h1>Find wild <span th:text="${plant.getcName()}"/>'s location</h1>
                     </div>
                 </div>
             </div>
@@ -413,26 +424,6 @@
     <script src="/js/contact-form-script.js"></script>
     <script src="/js/custom.js"></script>
         <script>
-            $(function () {
-                let flowers = [
-                    {"id":1,"type":"herb","name":"Lavendula","color":"purple","season":[1,2,3], "url":"/images/gallery-img-01.jpg"},
-                    {"id":2,"type":"shrub","name":"Blueberry","color":"blue","season":[1,2,4],"url":"/images/gallery-img-02.jpg"},
-                    {"id":3,"type":"herb","name":"Rosmarinus","color":"blue","season":[4,2,3],"url":"/images/gallery-img-03.jpg"},
-                    {"id":4,"type":"tree","name":"Melaleuca","color":"red","season":[3,2,4], "url":"/images/gallery-img-04.jpg"},
-                    {"id":5,"type":"shrub","name":"Yellow mallee","color":"yellow","season":[5,6,7],"url":"/images/gallery-img-05.jpg"},
-                    {"id":6,"type":"herb","name":"Catmint","color":"blue","season":[2,4,8], "url":"/images/gallery-img-06.jpeg"},
-                    {"id":7,"type":"herb","name":"Cornflower","color":"blue","season":[5,7,9], "url":"/images/gallery-img-08.jpg"},
-                    {"id":8,"type":"herb","name":"Forget-me-not","color":"blue","season":[4,10,11], "url":"/images/gallery-img-09.jpg"},
-                    {"id":9,"type":"shrub","name":"Snowberry","color":"white","season":[10,11,12], "url":"/images/gallery-img-10.jpg"},
-                    {"id":10,"type":"shrub","name":"Chrysanthus","color":"yellow","season":[5,9,10], "url":"/images/gallery-img-11.jpg"},
-                    {"id":11,"type":"shrub","name":"Bursaria","color":"white","season":[11,12], "url":"/images/gallery-img-12.jpg"},
-                    {"id":12,"type":"herb","name":"Cichorium","color":"blue","season":[7,8,9], "url":"/images/gallery-img-07.jpg"},
-                ];
-                var id = [[${id}]];
-                $('.img-fluid').attr("src",flowers[id-1].url);
-            })
-
-
             const TOKEN = "pk.eyJ1Ijoiamh1YTAwNjQiLCJhIjoiY2p2am42dnl2MDJ6bjRhb2R6aDhxNm4zbiJ9.CVW2cOXvLAhOUyW6ISnG8g";
             mapboxgl.accessToken = TOKEN;
             var map = new mapboxgl.Map({
@@ -441,6 +432,8 @@
                 center: [-77.04, 38.907],
                 zoom: 11.15
             });
+
+
 
             map.on('load', function() {
                 map.addSource('places', {
