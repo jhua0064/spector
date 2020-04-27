@@ -137,10 +137,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Services</h2>
+                    <h2>Choose plants you like to be at your garden!</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item active">Services</li>
+                        <li class="breadcrumb-item active">Plants</li>
                     </ul>
                 </div>
             </div>
@@ -164,20 +164,29 @@
                     <div class="special-menu text-left">
                         <div class="button-group filter-button-group" data-filter-group="type">
                             <button class="active" data-filter="">All Type</button>
-                            <button data-filter=".HERB">Herb</button>
-                            <button data-filter=".SHRUB">Shrub</button>
-                            <button data-filter=".TREE">Tree</button>
+                            <button data-filter=".herb">Herb</button>
+                            <button data-filter=".shrub">Shrub</button>
+                            <button data-filter=".tree">Tree</button>
+                            <button data-filter=".veg">Vegetable</button>
+                            <button data-filter=".aquatic">Aquatic</button>
                         </div>
-                        <div class="button-group filter-button-group" data-filter-group="color" style="margin-left: 5%">
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="special-menu text-left">
+                        <div class="button-group filter-button-group" data-filter-group="color">
                             <button class="active" data-filter="">All Color</button>
                             <button data-filter=".blue">Blue</button>
                             <button data-filter=".purple">Purple</button>
                             <button data-filter=".yellow">Yellow</button>
                             <button data-filter=".white">White</button>
+                            <button data-filter=".red">Red</button>
+                            <button data-filter=".orange">Orange</button>
+                            <button data-filter=".pink">Pink</button>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-12">
                     <div class="special-menu text-left">
                         <div class="button-group filter-button-group" data-filter-group="month">
@@ -411,6 +420,7 @@
         $(function () {
             let msg = "[[${plants}]]";
             var plants = $.parseJSON(msg.replace(/&quot;/g,'"'));
+            console.log(plants);
             for(var p in plants){
                 var season = plants[p]["season"].split(',')
                 plants[p]["season"] = season;
@@ -420,7 +430,7 @@
                 $('.special-list').append('<div class="col-lg-3 col-md-6 special-grid" id='+ plant.id +'>\n' +
                     '                    <div class="products-single fix">\n' +
                     '                        <div class="box-img-hover">\n' +
-                    '                            <img src='+ plant.imgLink +' class="img-fluid" width="255" height="170" alt="Image">\n' +
+                    '                            <img src='+ plant.imgLink +' class="img-fluid" alt="Image">\n' +
                     '                            <div class="mask-icon">\n' +
                     '                                <ul>\n' +
                     '                                    <li><a href="/detail/'+plant.id +'" data-toggle="tooltip" data-placement="right" title="view guide"><i class="fas fa-eye"></i></a></li>\n' +
@@ -432,16 +442,26 @@
                     '                    </div>\n' +
                     '                </div>');
 
-                $('#'+plant.id).addClass(plant.color).addClass(plant.type);
+                $('#'+plant.id).addClass(plant.color)
+                var type = plant.type;
+                if(type == "fruit/vegetable"){
+                    $('#'+plant.id).addClass("veg");
+                }else{
+                    $('#'+plant.id).addClass(type);
+                };
+
                 var season = plant.season;
                 for(var i in season){
+                    if(season[i] == 'n'){
+                        break;
+                    }
                     $('#'+plant.id).addClass(''+season[i]);
                 }
             }
             function buildGrid() {
-               for(var p in plants){
-                   createDiv(plants[p])
-               }
+                for(var p in plants){
+                    createDiv(plants[p]);
+                }
             }
             buildGrid();
         });

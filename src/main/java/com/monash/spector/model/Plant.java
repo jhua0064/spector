@@ -7,6 +7,8 @@ import javax.persistence.*;
 public class Plant {
     private Integer id;
     private String type;
+    @Column(name = "t_detail")
+    private String tDetail;
     @Column(name = "b_name")
     private String bName;
     @Column(name = "c_name")
@@ -20,13 +22,20 @@ public class Plant {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String gettDetail() {
+        return tDetail;
+    }
+
+    public void settDetail(String tDetail) {
+        this.tDetail = tDetail;
     }
 
     public String getType() {

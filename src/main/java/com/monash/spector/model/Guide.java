@@ -26,7 +26,6 @@ public class Guide {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;
     }
