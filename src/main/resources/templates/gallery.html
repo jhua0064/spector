@@ -210,7 +210,20 @@
             </div>
 
             <div class="row special-list">
-
+                <div class="col-lg-3 col-md-6 special-grid yellow veg" id="9" style="position: absolute; left: 0px; top: 0px;">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <img src="/images/gallery-img-9.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="/detail/9" data-toggle="tooltip" data-placement="right" title="view guide"><i class="fas fa-eye"></i></a></li>
+                                    <li hidden="hidden"><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                </ul>
+                                <a class="cart" href="/detail/9">Palm Leaf Abika</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -348,7 +361,6 @@
         $(function () {
             let msg = "[[${plants}]]";
             var plants = $.parseJSON(msg.replace(/&quot;/g,'"'));
-            console.log(plants);
             for(var p in plants){
                 var season = plants[p]["season"].split(',')
                 plants[p]["season"] = season;
@@ -387,17 +399,12 @@
                 }
             }
             function buildGrid() {
-                for(var p in plants){
-                    createDiv(plants[p]);
+                for(var i = 1; i< plants.length; i++){
+                    createDiv(plants[i]);
                 }
-
             }
             buildGrid();
-            $( window ).load(function() {
-                if (window.location.href.indexOf('reload')==-1) {
-                    window.location.replace(window.location.href+'?reload');
-                }
-            });
+
         });
 
     </script>

@@ -412,11 +412,11 @@
                     }
                 };
                 data.push(feature)
-            }
-            ;
+            };
+
             for (var r in records) {
                 var date = records[r].date;
-                date = date.substring(0,date.indexOf('8'));
+                date = new Date(Date.parse(date)).toDateString();
                 var feature = {
                     "type": "Feature",
                     "properties": {
@@ -440,7 +440,7 @@
             var map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/streets-v11',
-                center: [144.9633, -37.8184],
+                center: data[0].geometry.coordinates,
                 zoom: 9
             });
 
