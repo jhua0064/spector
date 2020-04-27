@@ -4,8 +4,33 @@
     margin-right: 3%;
 }
 
-.img-fluid{
+.box-img-hover .img-fluid{
     width: 255px;
     height: 170px;
 }
+
+.shop-cat-box .img-fluid{
+    width: 354px;
+    height: 354px;
+}
+
+.ins-inner-box img{
+    width: 300px;
+    height: 300px;
+}
+
+.banner-frame .img-fluid{
+    width: 550px;
+    height: 470px;
+}
+
+.our-team img{
+    width: 255px;
+    height: 340px;
+}
+
+.about-more a{
+    color: #ffc107;
+}
+
 /** ADD YOUR AWESOME CODES HERE **/

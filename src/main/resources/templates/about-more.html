@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- Basic -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>BeeProtector</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/custom.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<!-- Start Main Top -->
+<header class="main-header">
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+        <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
+                        aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/images/logo.jpg" class="logo" alt=""></a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/plants">Plants</a></li>
+                    <li class="dropdown" hidden="hidden">
+                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Weather</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Wind</a></li>
+                            <li><a href="#">Rain</a></li>
+                            <li><a href="#">Visibility</a></li>
+                            <li><a href="#">Air Condition</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" hidden="hidden"><a class="nav-link" href="/contact">Insects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+
+        </div>
+        <!-- Start Side Menu -->
+        <div class="side">
+            <a href="#" class="close-side"><i class="fa fa-times"></i></a>
+            <li class="cart-box">
+                <ul class="cart-list">
+                    <li>
+                        <a href="#" class="photo"><img src="/images/img-pro-01.jpg" class="cart-thumb" alt=""/></a>
+                        <h6><a href="#">Delica omtantur </a></h6>
+                        <p>1x - <span class="price">$80.00</span></p>
+                    </li>
+                    <li>
+                        <a href="#" class="photo"><img src="/images/img-pro-02.jpg" class="cart-thumb" alt=""/></a>
+                        <h6><a href="#">Omnes ocurreret</a></h6>
+                        <p>1x - <span class="price">$60.00</span></p>
+                    </li>
+                    <li>
+                        <a href="#" class="photo"><img src="/images/img-pro-03.jpg" class="cart-thumb" alt=""/></a>
+                        <h6><a href="#">Agam facilisis</a></h6>
+                        <p>1x - <span class="price">$40.00</span></p>
+                    </li>
+                    <li class="total">
+                        <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
+                        <span class="float-right"><strong>Total</strong>: $180.00</span>
+                    </li>
+                </ul>
+            </li>
+        </div>
+        <!-- End Side Menu -->
+    </nav>
+    <!-- End Navigation -->
+</header>
+<!-- End Main Top -->
+
+
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>ABOUT US</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active">ABOUT US</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+
+<!-- Start About Page  -->
+<div class="about-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="about-more">
+                <h2 class="noo-sh-title-top">Why should we protect bees?</h2>
+                <p>
+                    Australian native bees are under threat, in spite of the beauty and value of these remarkable
+                    insects.
+                    Our native bees delight observant gardeners with their dazzling colours and their fascinating
+                    behaviour.
+                    <a href="https://www.aussiebee.com.au/pollination.html" target="_blank">Our native bees are also
+                        vital pollinators</a>
+                    --- they help our wildflowers to survive and increase the yield of many of our agricultural crops.
+                </p>
+                <p><img src="/images/add-img-01.jpg"><br>
+                    <i>Native Blue Banded Bees can perform a special type of pollination needed by tomato crops</i>
+                </p>
+                <p>
+                    <a href="https://www.aussiebee.com.au/gallery.html" target="_blank">Australia has over 1,700 species
+                        of native bees.</a>
+                    They build nests in a wide variety of materials, such as hollow trees, old soft timber, woody stems,
+                    and bare patches of ground.
+                    Their nests can often be accidentally destroyed through landscaping, gardening and land clearing
+                    activities. </p>
+                <p><b>Some examples include:</b></p>
+                <ul class="about-list">
+                    <li>1. Old dead canes of the weed Lantana are favoured nest sites of the amazing Reed Bees,
+                        Exoneura. These nests are often destroyed when Lantana is cleared in bush regeneration work or
+                        farmland management.
+                        <a href="https://www.aussiebee.com.au/gallery.html" target="_blank">
+                            Find out how Reed Bee nests in Lantana can be saved and relocated!</a>
+                    </li>
+                    <li>
+                        2. Hollows inside mature, living and dead trees are used by the Stingless Bees, Tetragonula* and
+                        Austroplebeia, for their large social nests. These trees are often cleared for land subdivisions
+                        and cut up for firewood.
+                        <a href="https://www.aussiebee.com.au/stinglessbees.html" target="_blank">
+                            Find out how nests of Stingless Bees in recently-fallen trees can be saved!</a> [*
+                        Previously called Trigona]
+                    </li>
+                    <li>
+                        3. The majority of Australia's native bee species nest in burrows in bare ground. These nest
+                        sites may be destroyed in urban areas when these areas are converted to lawn or covered with
+                        pavers.
+                        <a href="https://www.aussiebee.com.au/groundnestingbees.html" target="_blank">
+                            Find out how urban gardeners can help save ground-nesting bees!</a>
+                    </li>
+                    <li>
+                        4. The flower spikes of the Grass Tree, Xanthorrhoea, are favourite nest sites of the stunning
+                        Metallic Carpenter Bees, Xylocopa (Lestis). Landclearing for farming has caused
+                        so much loss of this bee's nest sites that they are no longer found in Victoria or mainland
+                        South Australia.
+                        <a href="https://www.aussiebee.com.au/carpenterbees.html" target="_blank">Learn more!</a>
+                        <br>
+                        <img src="/images/add-img-02.jpg"><br>
+                        <i>This dazzling Carpenter Bee has sadly disappeared from much of its original range in southern
+                            Australia due to landclearing</i>
+                    </li>
+                </ul>
+
+                <p>Pesticide use also has a major impact on native bees. Insecticides intended to kill pests in gardens
+                    or crops, may also be toxic to valuable pollinating insects such as native bees. Public awareness
+                    has recently soared about the effect of these chemicals,
+                    and pressure is mounting to ban certain formulations and develop less toxic alternatives</p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="about-more">
+                <h2 class="noo-sh-title-top">Five Ways to Help Save the Beautiful Native Bees that Visit Your Garden or
+                    Farm</h2>
+                <p>
+                <h3>1. Spread the Word about Australian Native Bees</h3>
+                Study the wealth of information on Aussie Bee website and in our
+                <a href="https://www.aussiebee.com.au/abshop.html" target="_blank">
+                    Aussie Bee eBooks </a>so that you can discover your local native bees and learn how to encourage
+                them. You also may like to attend a
+                <a href="https://www.aussiebee.com.au/seminars.html" target="_blank">
+                    native bee seminar </a>or special event.
+                </p>
+                <p>Then tell your friends and neighbours about our vital native bees and encourage them to join you in
+                    protecting and supporting them. Increasing public support for our native wildlife helps ensure its
+                    protection! </p>
+                <p>You may like to join discussions about native bees on Facebook and share your own experiences. There
+                    are now many excellent Facebook pages and groups dedicated to native bees, including:
+                <ul>
+                    <a href="https://www.facebook.com/aussiebeewebsite" target="_blank">
+                        <li>Australian Native Bees on Aussie Bee Website</li>
+                    </a>
+                    <a href="https://www.facebook.com/groups/beeawareofyournativebees/" target="_blank">
+                        <li>Bee Aware of Your Native Bees</li>
+                    </a>
+                    <a href="https://www.facebook.com/groups/australiannativebeenetwork/" target="_blank">
+                        <li>Australian Native Bee Network</li>
+                    </a>
+                    <a href="https://www.facebook.com/groups/1041684025880609/" target="_blank">
+                        <li>Bees in the 'Burbs in a Biodiversity Hotspot (with focus on WA)</li>
+                    </a>
+                </ul>
+                </p>
+                <p>
+                <h3>2. Plant a Bee-Friendly Garden</h3>
+                Create a garden which will support your local native bee species. Certain plants are particularly
+                good sources of nectar and pollen for native bees and other plants provide valuable materials for nest
+                construction.
+                Study
+                <a href="https://www.aussiebee.com.au/bee-friendly-garden.html" target="_blank">
+                    the Aussie Bee guide to planting a Bee-Friendly Garden </a>
+                and take a look at our list of
+                <a href="https://www.aussiebee.com.au/flowerslovedbybees.html" target="_blank">
+                    Flowers Loved by Native Bees.</a>
+                <br> <img src="/images/blog-img-01.jpg"><br>
+                <i>This native Masked Bee finds abundant nectar in gum blossom.</i>
+                </p>
+                <p>Farmers can also encourage natural pollinators to visit their crops, and increase their crop yield,
+                    by
+                    <a href="http://www.beesbusiness.com.au/suppoll.html" target="_blank">
+                        allowing wildflowers to grow on strips of land beside their fields or along roadsides.</a></p>
+                <p>
+                <h3>3. Keep Insecticide use to the Absolute Minimum</h3>
+                Avoid using insecticides or pesticides wherever possible.
+                Instead encourage natural insect predators in the garden or consider using biological pest control.
+                If insecticide use is unavoidable, choose less toxic formulations, apply it only when bees are unlikely
+                to be flying
+                (for example, in the coldest part of the day or at night), avoid windy conditions and do not directly
+                spray the plant's blossoms.
+                <a href="http://www.beesbusiness.com.au/articles/LLS_Native_Bee_A3_Poster_C_FA_NoCrops.pdf"
+                   target="_blank">
+                    More advice on pesticide use.</a>
+                </p>
+                <p>
+                <h3>4. Provide Nest Habitat</h3>
+                Watch out for native bee nesting areas, such as those described
+                <a href="https://www.aussiebee.com.au/savebees.html#nestexamples" target="_blank">
+                    above </a>, and protect these areas.
+                Leave some areas of bare earth in your yard to encourage ground nesting bees and don't clear away old
+                mature timber that is used by bees that nest in tiny crevices.
+                </p>
+                <p>
+                    You can also create additional nest sites for native bees by setting up Bee Hotels.
+                    These can be made simply from inexpensive materials and are fun for all the family to create and
+                    observe.
+                    <a href="https://www.aussiebee.com.au/bee-hotel-aussie-bee-guide.html" target="_blank">
+                        Read Aussie Bee's detailed guide to Making Bee Hotels.</a>
+                    <br>
+                    <img src="/images/blog-img-02.jpg"><br>
+                    <i>Bee Hotels like these support a wide range of native bees.</i>
+                </p>
+                <p>
+                <h3>5. Contribute to Native Bee Surveys</h3>
+                Share your observations about native bees. Information about the distribution and behaviour of many
+                native bee species is amazingly incomplete. Your observations could be most valuable and could help fill
+                in important gaps! Can you help?
+                </p>
+                <p>
+
+                    Take part in
+                    <a href="https://wildpollinatorcount.com/" target="_blank">
+                        the Wild Pollinator Counts</a> that are held Australia-wide twice a year. You don't need to be
+                    an expert or have any specialised equipment. Just spend ten minutes watching insects that visit a
+                    flower in your garden or local park, note down what you see in simple categories, then submit your
+                    observations online. This is a wonderful activity for schools and community groups and adds to our
+                    knowledge of Australia's pollinating insects.</p>
+                <p>Another great way to contribute is to post your native bee sightings on
+                    <a href="http://www.bowerbird.org.au/projects/2/sightings" target="_blank">
+                        BowerBird website</a>. Just take a photo of your bee and upload it to the site where bee
+                    specialists will discuss and hopefully identify it. Sightings from BowerBird are passed on to the
+                    excellent
+                    <a href="https://www.ala.org.au/" target="_blank">
+                        Atlas of Living Australia </a>
+                    website, adding to Australia's knowledge about our native bees.</p>
+
+                <p>
+                    Together we can protect and support a beautiful group of Australian animals which are just as
+                    important and interesting as koalas and kangaroos.
+                    <br> Our Australian native bees are charming, colourful insects, and they are vital to the
+                    Australian environment!
+                    <br>
+                    <img src="/images/blog-img.jpg"><br>
+                    <a href="https://www.aussiebee.com.au/savebees.html" target="_blank">
+                        <i>Link to more detailed page</i></a>
+                </p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="about-more">
+                <h2 class="noo-sh-title-top">Rules to decide flowers</h2>
+                <p>
+                    <b>Choose blue, purple and yellow:</b> Bees find blue, purple and yellow flowers most appealing.
+                    Flat or shallow blossoms, such as daisies, zinnias, asters and Queen Anne's lace, will attract the
+                    largest variety of bees. Long-tongued bees will be attracted to plants in the mint family, such as
+                    nepeta, salvia, oregano, mint and lavender. Long-tongued bumblebees are attracted to flowers with
+                    hidden nectar spurs, such as larkspur, monkshood, monarda, columbine and snapdragons.
+                </p>
+                <p>
+                    <b>Avoid using pesticides:</b> Many pesticides — even organic ones — are toxic to bees and other
+                    pollinators. Use cultural techniques to control pests, such as crop rotation and row covers, as well
+                    as nontoxic controls, such as trapping and hand-picking. If you choose to use pesticides, use them
+                    only as a last resort. Choose targeted pesticides, such as Bt for caterpillars (keep in mind this
+                    kills butterfly larvae as well). To protect pollinators, do not use pesticides on open blossoms or
+                    when bees or other pollinators are present.
+                </p>
+                <p>
+                    <a href="https://www.gardeners.com/how-to/attracting-beneficial-bees/5024.html" target="_blank">
+                        Link to more detailed page </a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About Page -->
+
+<!-- Start Instagram Feed  -->
+<div class="instagram-box">
+    <div class="main-instagram owl-carousel owl-theme">
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-01.jpg" alt=""/>
+                <!-- <div class="hov-in">
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                 </div>-->
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-02.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-03.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-04.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-05.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-06.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-07.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-08.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-09.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-05.jpg" alt=""/>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Instagram Feed  -->
+
+
+<!-- Start Footer  -->
+<footer>
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-widget">
+                        <h4>About Beeprotector</h4>
+                        <p>Australian native bees are under threat, in spite of the beauty and value of these remarkable insects. Our native bees delight observant gardeners with their dazzling colours and their fascinating behaviour. </p>
+                        <p>Our native bees are also vital pollinators --- they help our wildflowers to survive and increase the yield of many of our agricultural crops.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="/about">About Us</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: Level 6, Building H <br>Monash University (Caulfield Campus)<br> VIC 3610 </p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i>Email: lshi0018@student.monash.edu</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer  -->
+
+<!-- Start copyright  -->
+<div class="footer-copyright">
+    <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Beeprotector</a> Design By :
+        <a href="https://html.design/">Spector</a></p>
+</div>
+<!-- End copyright  -->
+
+<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+<!-- ALL JS FILES -->
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- ALL PLUGINS -->
+<script src="/js/jquery.superslides.min.js"></script>
+<script src="/js/bootstrap-select.js"></script>
+<script src="/js/inewsticker.js"></script>
+<script src="/js/bootsnav.js."></script>
+<script src="/js/images-loded.min.js"></script>
+<script src="/js/isotope.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/baguetteBox.min.js"></script>
+<script src="/js/form-validator.min.js"></script>
+<script src="/js/contact-form-script.js"></script>
+<script src="/js/custom.js"></script>
+</body>
+
+</html>

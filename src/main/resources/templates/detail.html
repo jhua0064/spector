@@ -64,9 +64,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="/plants">Plants</a></li>
-                    <li class="dropdown">
+                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/plants">Plants</a></li>
+                    <li class="dropdown" hidden="hidden">
                         <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Weather</a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Wind</a></li>
@@ -75,7 +75,7 @@
                             <li><a href="#">Air Condition</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="/contact">Insects</a></li>
+                    <li class="nav-item" hidden="hidden"><a class="nav-link" href="/contact">Insects</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
 
                 </ul>
@@ -174,8 +174,8 @@
                         <h1 style="font-size: 30px; font-weight: bolder; ">Plant Profile</h1>
                         <label class="guide-title">Botanical Name:</label> <span th:text="${plant.getbName()}"/> <br>
                         <label class="guide-title">Common Name:</label> <span th:text="${plant.getcName()}"></span> <br>
-                        <label class="guide-title season">Flowering Months:</label> <span class="season" ></span><br>
-                        <label class="guide-title smell">Smell:</label> <span class="smell" ></span>
+                        <label class="guide-title season">Flowering Months:</label> <span class="season-span" ></span><br>
+                        <label class="guide-title smell">Smell:</label> <span class="smell-span" ></span>
                         <br>
                     </p>
                 </div>
@@ -242,82 +242,55 @@
     <div class="main-instagram owl-carousel owl-theme">
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-01.jpg" alt=""/>
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                <img src="/images/instagram-img-01.jpg" alt="" />
+                <!-- <div class="hov-in">
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                 </div>-->
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-02.jpg" alt=""/>
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                <img src="/images/instagram-img-02.jpg" alt="" />
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-03.jpg" alt=""/>
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                <img src="/images/instagram-img-03.jpg" alt="" />
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-04.jpg" alt=""/>
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                <img src="/images/instagram-img-04.jpg" alt="" />
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-05.jpg" alt=""/>
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                <img src="/images/instagram-img-05.jpg" alt="" />
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-06.jpg" alt=""/>
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                <img src="/images/instagram-img-06.jpg" alt="" />
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-07.jpg" alt=""/>
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                <img src="/images/instagram-img-07.jpg" alt="" />
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-08.jpg" alt=""/>
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                <img src="/images/instagram-img-08.jpg" alt="" />
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-09.jpg" alt=""/>
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                <img src="/images/instagram-img-09.jpg" alt="" />
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-05.jpg" alt=""/>
-                <div class="hov-in">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                <img src="/images/instagram-img-05.jpg" alt="" />
             </div>
         </div>
     </div>
@@ -329,67 +302,20 @@
 <footer>
     <div class="footer-main">
         <div class="container">
-            <div class="row" hidden="true">
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-top-box">
-                        <h3>Business Time</h3>
-                        <ul class="list-time">
-                            <li>Monday - Friday: 08.00am to 05.00pm</li>
-                            <li>Saturday: 10.00am to 08.00pm</li>
-                            <li>Sunday: <span>Closed</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-top-box">
-                        <h3>Newsletter</h3>
-                        <form class="newsletter-box">
-                            <div class="form-group">
-                                <input class="" type="email" name="Email" placeholder="Email Address*"/>
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <button class="btn hvr-hover" type="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12">
-                    <div class="footer-top-box">
-                        <h3>Social Media</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
             <div class="row">
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-widget">
                         <h4>About Beeprotector</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. </p>
+                        <p>Australian native bees are under threat, in spite of the beauty and value of these remarkable insects. Our native bees delight observant gardeners with their dazzling colours and their fascinating behaviour. </p>
+                        <p>Our native bees are also vital pollinators --- they help our wildflowers to survive and increase the yield of many of our agricultural crops.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-link">
                         <h4>Information</h4>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Customer Service</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
-                            <li><a href="#">Terms &amp; Conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Delivery Information</a></li>
+                            <li><a href="/about">About Us</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -398,16 +324,10 @@
                         <h4>Contact Us</h4>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Michael I. Days 3756 <br>Preston Street
-                                    Wichita,<br> KS 67213 </p>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: Level 6, Building H <br>Monash University (Caulfield Campus)<br> VIC 3610 </p>
                             </li>
                             <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+1-888705770">+1-888 705
-                                    770</a></p>
-                            </li>
-                            <li>
-                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:contactinfo@gmail.com">contactinfo@gmail.com</a>
-                                </p>
+                                <p><i class="fas fa-envelope"></i>Email: lshi0018@student.monash.edu</p>
                             </li>
                         </ul>
                     </div>
@@ -449,20 +369,21 @@
         var season = "[[${plant.getSeason()}]]";
         if(season == "n"){
             $(".season").attr("hidden", "hidden");
-        };
-        var seasonList = season.split(",");
-        var seasonStr = "";
-        const month = {1:"Jan", 2:"Feb", 3:"Mar", 4:"Apr", 5:"May", 6:"Jun", 7:"Jul", 8:"Aug", 9:"Sep", 10:"Oct", 11:"Nov", 12:"Dec"};
-        const map = new Map(Object.entries(month));
-        for(var i in seasonList){
-            seasonStr += "  "+map.get(seasonList[i]);
+        }else{
+            var seasonList = season.split(",");
+            var seasonStr = "";
+            const month = {1:"Jan", 2:"Feb", 3:"Mar", 4:"Apr", 5:"May", 6:"Jun", 7:"Jul", 8:"Aug", 9:"Sep", 10:"Oct", 11:"Nov", 12:"Dec"};
+            const map = new Map(Object.entries(month));
+            for(var i in seasonList){
+                seasonStr += "  "+map.get(seasonList[i]);
+            }
+            $(".season-span").html(seasonStr);
         }
-        $(".season").html(seasonStr);
 
 
         var smell = [[${guide.getSmell()}]];
         if(smell == 1){
-            $(".smell").html("It produces good smell!");
+            $(".smell-span").html("It produces good smell!");
         }else{$(".smell").attr("hidden", "hidden")}
 
 

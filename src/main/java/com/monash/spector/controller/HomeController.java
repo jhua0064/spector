@@ -24,6 +24,11 @@ public class HomeController {
         return "about";
     }
 
+    @RequestMapping("/more")
+    public String aboutMore(){
+        return "about-more";
+    }
+
     @RequestMapping("/contact")
     public String contactPage(){
         return "contact-us";
