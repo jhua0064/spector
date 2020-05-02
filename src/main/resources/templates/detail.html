@@ -64,67 +64,18 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-menu">
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/plants">Plants</a></li>
-                    <li class="dropdown" hidden="hidden">
-                        <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Weather</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Wind</a></li>
-                            <li><a href="#">Rain</a></li>
-                            <li><a href="#">Visibility</a></li>
-                            <li><a href="#">Air Condition</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item" hidden="hidden"><a class="nav-link" href="/contact">Insects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/plants">Plants</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link ">Weather</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/insect">Insects</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
 
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
 
-            <!-- Start Atribute Navigation -->
-            <div class="attr-nav" hidden="true">
-                <ul>
-                    <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                    <li class="side-menu">
-                        <a href="#">
-                            <i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
-                            <p>My Cart</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- End Atribute Navigation -->
         </div>
-        <!-- Start Side Menu -->
-        <div class="side">
-            <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-            <li class="cart-box">
-                <ul class="cart-list">
-                    <li>
-                        <a href="#" class="photo"><img src="/images/img-pro-01.jpg" class="cart-thumb" alt=""/></a>
-                        <h6><a href="#">Delica omtantur </a></h6>
-                        <p>1x - <span class="price">$80.00</span></p>
-                    </li>
-                    <li>
-                        <a href="#" class="photo"><img src="/images/img-pro-02.jpg" class="cart-thumb" alt=""/></a>
-                        <h6><a href="#">Omnes ocurreret</a></h6>
-                        <p>1x - <span class="price">$60.00</span></p>
-                    </li>
-                    <li>
-                        <a href="#" class="photo"><img src="/images/img-pro-03.jpg" class="cart-thumb" alt=""/></a>
-                        <h6><a href="#">Agam facilisis</a></h6>
-                        <p>1x - <span class="price">$40.00</span></p>
-                    </li>
-                    <li class="total">
-                        <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
-                        <span class="float-right"><strong>Total</strong>: $180.00</span>
-                    </li>
-                </ul>
-            </li>
-        </div>
-        <!-- End Side Menu -->
+
     </nav>
     <!-- End Navigation -->
 </header>
@@ -154,7 +105,7 @@
             <div class="col-lg-12">
                 <div class="title-all text-center">
                     <h1>Plants Guide</h1>
-                    <p>Let us help you to plant it well!</p>
+                    <p>Let’s Learn how to plant it effectively!</p>
                 </div>
             </div>
         </div>
@@ -171,12 +122,13 @@
             <div class="special-grid" style="align-content: center; width: 50%;margin-top: 5%">
                 <div class="products-single fix ">
                     <p>
-                        <h1 style="font-size: 30px; font-weight: bolder; ">Plant Profile</h1>
-                        <label class="guide-title">Botanical Name:</label> <span th:text="${plant.getbName()}"/> <br>
-                        <label class="guide-title">Common Name:</label> <span th:text="${plant.getcName()}"></span> <br>
-                        <label class="guide-title season">Flowering Months:</label> <span class="season-span" ></span><br>
-                        <label class="guide-title smell">Smell:</label> <span class="smell-span" ></span>
-                        <br>
+                    <h1 style="font-size: 30px; font-weight: bolder; ">Plant Profile</h1>
+                    <label class="guide-title">Botanical Name:</label> <span th:text="${plant.getbName()}"/> <br>
+                    <label class="guide-title">Common Name:</label> <span th:text="${plant.getcName()}"></span> <br>
+                    <label class="guide-title season">Flowering Months:</label> <span class="season-span"></span><br
+                        class="season">
+                    <label class="guide-title smell">Smell:</label> <span class="smell-span"></span>
+                    <br>
                     </p>
                 </div>
             </div>
@@ -192,20 +144,29 @@
             <div class="special-grid" style="width: 60%">
                 <div class="products-single fix">
                     <p>
-                        <label class="guide-title">Water Level:</label> <span th:text="${guide.getWaterNeed()}"/> <br>
-                        <label class="guide-title">Light Level:</label> <span th:text="${guide.getLightNeed()}"></span>
+                        <label class="guide-title">Water Level:</label> <span th:text="${guide.getWaterNeed()}"/>
+
                         <br>
-                        <label class="guide-title">Soil Type:</label> <span th:text="${guide.getSoilType()}"></span>
-                        <br>
+                    <div class="guide-light">
+                        <label class="guide-title">Light Level:</label> I can grow under
+                        <span th:text="${guide.getLightNeed()}"></span>
+                    </div>
+                    <div class="guide-soil">
+                        <label class="guide-title">Soil Type:</label> I can grow in
+                        <span th:text="${guide.getSoilType()}"></span>
+                    </div>
+                    <div class="guide-soil-add">
                         <label class="guide-title">Soil Addition:</label> <span th:text="${guide.getSoilAdd()}"></span>
-                        <br>
+                    </div>
+                    <div class="guide-height">
                         <label class="guide-title">Height Range:</label> <span th:text="${guide.gethRange()}"></span>
-                        <br>
+                    </div>
+                    <div class="guide-spread">
                         <label class="guide-title">Spread Range:</label> <span th:text="${guide.getsRange()}"></span>
-                        <br>
-                        <label class="guide-title">Climate:</label> <span th:text="${guide.getClimate()}"></span> <br>
-                        <label class="guide-title">Maintenance:</label> <span
-                            th:text="${guide.getMaintenance()}"></span> <br>
+                    </div>
+                    <label class="guide-title">Climate:</label> <span th:text="${guide.getClimate()}"></span> <br>
+                    <label class="guide-title">Maintenance:</label> <span
+                        th:text="${guide.getMaintenance()}"></span> <br>
 
                     </p>
                 </div>
@@ -242,7 +203,7 @@
     <div class="main-instagram owl-carousel owl-theme">
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-01.jpg" alt="" />
+                <img src="/images/instagram-img-01.jpg" alt=""/>
                 <!-- <div class="hov-in">
                      <a href="#"><i class="fab fa-instagram"></i></a>
                  </div>-->
@@ -250,49 +211,40 @@
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-02.jpg" alt="" />
+                <img src="/images/instagram-img-02.jpg" alt=""/>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-03.jpg" alt="" />
+                <img src="/images/instagram-img-03.jpg" alt=""/>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-04.jpg" alt="" />
+                <img src="/images/instagram-img-04.jpg" alt=""/>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-05.jpg" alt="" />
+                <img src="/images/instagram-img-05.jpg" alt=""/>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-06.jpg" alt="" />
+                <img src="/images/instagram-img-06.jpg" alt=""/>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-07.jpg" alt="" />
+                <img src="/images/instagram-img-07.jpg" alt=""/>
             </div>
         </div>
         <div class="item">
             <div class="ins-inner-box">
-                <img src="/images/instagram-img-08.jpg" alt="" />
+                <img src="/images/instagram-img-08.jpg" alt=""/>
             </div>
         </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="/images/instagram-img-09.jpg" alt="" />
-            </div>
-        </div>
-        <div class="item">
-            <div class="ins-inner-box">
-                <img src="/images/instagram-img-05.jpg" alt="" />
-            </div>
-        </div>
+
     </div>
 </div>
 <!-- End Instagram Feed  -->
@@ -306,8 +258,11 @@
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-widget">
                         <h4>About Beeprotector</h4>
-                        <p>Australian native bees are under threat, in spite of the beauty and value of these remarkable insects. Our native bees delight observant gardeners with their dazzling colours and their fascinating behaviour. </p>
-                        <p>Our native bees are also vital pollinators --- they help our wildflowers to survive and increase the yield of many of our agricultural crops.</p>
+                        <p>Australian native bees are under threat, in spite of the beauty and value of these remarkable
+                            insects. Our native bees delight observant gardeners with their dazzling colours and their
+                            fascinating behaviour. </p>
+                        <p>Our native bees are also vital pollinators --- they help our wildflowers to survive and
+                            increase the yield of many of our agricultural crops.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
@@ -315,7 +270,7 @@
                         <h4>Information</h4>
                         <ul>
                             <li><a href="/about">About Us</a></li>
-
+                            <li><a href="/more">More Detail to Bee Friendly Guide</a></li>
                         </ul>
                     </div>
                 </div>
@@ -324,7 +279,8 @@
                         <h4>Contact Us</h4>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt"></i>Address: Level 6, Building H <br>Monash University (Caulfield Campus)<br> VIC 3610 </p>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: Level 6, Building H <br>Monash
+                                    University (Caulfield Campus)<br> VIC 3610 </p>
                             </li>
                             <li>
                                 <p><i class="fas fa-envelope"></i>Email: lshi0018@student.monash.edu</p>
@@ -356,7 +312,7 @@
 <script src="/js/jquery.superslides.min.js"></script>
 <script src="/js/bootstrap-select.js"></script>
 <script src="/js/inewsticker.js"></script>
-<script src="/js/bootsnav.js."></script>
+<script src="/js/bootsnav.js"></script>
 <script src="/js/images-loded.min.js"></script>
 <script src="/js/isotope.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
@@ -366,26 +322,67 @@
 <script src="/js/custom.js"></script>
 <script>
     $(function () {
+        //Profile
         var season = "[[${plant.getSeason()}]]";
-        if(season == "n"){
-            $(".season").attr("hidden", "hidden");
-        }else{
+        if (season == "n") {
+            $(".season").hide();
+            $(".season-span").hide();
+        } else {
             var seasonList = season.split(",");
             var seasonStr = "";
-            const month = {1:"Jan", 2:"Feb", 3:"Mar", 4:"Apr", 5:"May", 6:"Jun", 7:"Jul", 8:"Aug", 9:"Sep", 10:"Oct", 11:"Nov", 12:"Dec"};
+            const month = {
+                1: "Jan",
+                2: "Feb",
+                3: "Mar",
+                4: "Apr",
+                5: "May",
+                6: "Jun",
+                7: "Jul",
+                8: "Aug",
+                9: "Sep",
+                10: "Oct",
+                11: "Nov",
+                12: "Dec"
+            };
             const map = new Map(Object.entries(month));
-            for(var i in seasonList){
-                seasonStr += "  "+map.get(seasonList[i]);
+            for (var i in seasonList) {
+                seasonStr += "  " + map.get(seasonList[i]);
             }
             $(".season-span").html(seasonStr);
         }
 
 
         var smell = [[${guide.getSmell()}]];
-        if(smell == 1){
+        if (smell == 1) {
             $(".smell-span").html("It produces good smell!");
-        }else{$(".smell").attr("hidden", "hidden")}
+        } else {
+            $(".smell").hide();
+            $(".smell-span").hide()
+        }
 
+        //guide present
+        const lightImg = {"Sun":"/images/sun-img.png", "Semi-shade":"/images/semi-shade-img.png", "Shade":"/images/shade-img.png"};
+        const lightMap = new Map(Object.entries(lightImg));
+        var light = "[[${guide.getLightNeed()}]]";
+        var lightList = light.split(",");
+        for(var  i in lightList){
+            $(".guide-light").append(' <img src='+ lightMap.get(lightList[i]) +' width="50" height="50"> ');
+        }
+
+        const soilImg = {"Loam":"/images/loam-img.png", "Sand":"/images/sand-img.png", "Clay":"/images/clay-img.png"};
+        const soilMap = new Map(Object.entries(soilImg));
+        var soil = "[[${guide.getSoilType()}]]";
+        var soilList = soil.split(",");
+        for(var  i in soilList){
+            $(".guide-soil").append(' <img src='+ soilMap.get(soilList[i]) +' width="50" height="50"> ');
+        }
+
+        var soilAdd = "[[${guide.getSoilAdd()}]]";
+        var height = "[[${guide.gethRange()}]]";
+        var spread = "[[${guide.getsRange()}]]";
+        if(soilAdd === "n"){$(".guide-soil-add").hide()}
+        if(height === "n"){$(".guide-height").hide()}
+        if(spread === "n"){$(".guide-spread").hide()}
 
         //show map start
         let msg = "[[${records}]]";
@@ -403,8 +400,8 @@
                     "properties": {
                         "description":
                             '<strong>Unfortunately</strong>' +
-                            '<p>it seems that nobody has seen  ' + name + '... </p>',
-                        "icon": "garden"
+                            '<p>It seems that nobody has seen  ' + name + '... </p>',
+                        "icon": "information"
                     },
                     "geometry": {
                         "type": "Point",
@@ -412,7 +409,8 @@
                     }
                 };
                 data.push(feature)
-            };
+            }
+            ;
 
             for (var r in records) {
                 var date = records[r].date;
@@ -422,7 +420,7 @@
                     "properties": {
                         "description":
                             '<strong>' + name + '</strong>' +
-                            '<p>it was found here at ' + date + '</p>',
+                            '<p>It was found here at ' + date + '</p>',
                         "icon": "garden"
                     },
                     "geometry": {
@@ -454,14 +452,14 @@
                         "data": {
                             "type": "FeatureCollection",
                             "features": data
-                            }
-                        },
-                        'layout': {
-                            'icon-image': '{icon}-15',
-                            'icon-size': 2,
-                            'icon-allow-overlap': true
                         }
-                    });
+                    },
+                    'layout': {
+                        'icon-image': '{icon}-15',
+                        'icon-size': 2,
+                        'icon-allow-overlap': true
+                    }
+                });
 
                 // Create a popup, but don't add it to the map yet.
                 var popup = new mapboxgl.Popup({

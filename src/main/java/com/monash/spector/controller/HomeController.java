@@ -29,9 +29,9 @@ public class HomeController {
         return "about-more";
     }
 
-    @RequestMapping("/contact")
+    @RequestMapping("/insect")
     public String contactPage(){
-        return "contact-us";
+        return "insect";
     }
 
 

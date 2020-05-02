@@ -163,7 +163,7 @@
 }
 /*------------------------------------------------------------------ HEADER -------------------------------------------------------------------*/
  .main-top{
-     background: #000000;
+     background: #610901;
      padding: 10px 0px;
 }
  .custom-select-box{
@@ -331,7 +331,7 @@
 }
  ul.cart-list > li.total > .btn{
      border-bottom: solid 1px #cfcfcf !important;
-     color: #000000 ;
+     color: #610901 ;
      padding: 10px 15px;
      border: none;
      font-weight: 700;
@@ -508,7 +508,7 @@
      position: relative;
      font-weight: 700;
      font-size: 16px;
-     color: #000000;
+     color: #610901;
 	 text-transform: uppercase;
      padding-top: 10px;
      padding-bottom: 10px;
@@ -663,7 +663,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #000000;
+	background: #610901;
 	border-radius: 100%;
 	-webkit-transform: scale(0);
 	transform: scale(0);
@@ -759,7 +759,7 @@
      font-size: 40px;
 }
  .slides-navigation a:hover {
-     background: #000000;
+     background: #610901;
 }
  .cover-slides .container{
      height: 100%;
@@ -818,7 +818,7 @@
      position: relative;
      padding: 3px;
      overflow: hidden;
-     border: 0px solid #000000;
+     border: 0px solid #610901;
 	 box-shadow: 9px 9px 30px 0px rgba(0, 0, 0, 0.3);
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease-in-out 0s;
@@ -885,7 +885,7 @@
  .title-all h1{
      font-size: 32px;
      font-weight: 700;
-     color: #000000;
+     color: #610901;
 }
  .title-all p{
      color: #999999;
@@ -909,7 +909,7 @@
      font-size: 18px;
 }
  .filter-button-group button.active{
-     background: #000000;
+     background: #610901;
 }
  .filter-button-group button{
 }
@@ -941,7 +941,7 @@
      text-transform: uppercase;
 }
  .type-lb .new{
-     background: #000000;
+     background: #610901;
      color: #ffffff;
      padding: 2px 10px;
      font-weight: 700;
@@ -997,11 +997,11 @@
      color: #ffffff;
 }
  .mask-icon a.cart:hover{
-     background: #000000;
+     background: #610901;
      color: #ffffff;
 }
  .mask-icon ul li a:hover{
-     background: #000000;
+     background: #610901;
      color: #ffffff;
 }
  .products-single .mask-icon{
@@ -1115,7 +1115,7 @@
  .title-blog h3{
      font-size: 20px;
      font-weight: 700;
-     color: #000000;
+     color: #610901;
 }
  .title-blog p{
      margin: 0px;
@@ -1132,7 +1132,7 @@
 	 display: inline-block;
  }
  .option-blog li a{
-     background: #000000;
+     background: #610901;
      display: inline-block;
      font-size: 18px;
      color: #ffffff;
@@ -1190,7 +1190,7 @@
      z-index: 0;
 }
  .main-instagram.owl-carousel .owl-nav button.owl-prev{
-     background: #000000;
+     background: #610901;
      position: absolute;
      z-index: 1;
      display: block;
@@ -1210,7 +1210,7 @@
      transition: all 0.3s ease;
 }
  .main-instagram.owl-carousel .owl-nav button.owl-next{
-     background: #000000;
+     background: #610901;
      position: absolute;
      z-index: 1;
      display: block;
@@ -1256,7 +1256,7 @@
      height: 100%;
 }
  .hov-in i{
-     color: #000000;
+     color: #610901;
      font-size: 48px;
      position: relative;
      z-index: 2;
@@ -1540,7 +1540,7 @@
 }
  .all-title-box .breadcrumb li{
      display: inline-block;
-     color: #000000;
+     color: #610901;
      font-size: 16px;
 }
  .all-title-box .breadcrumb li a{
@@ -1548,7 +1548,7 @@
      font-size: 16px;
 }
  .all-title-box .breadcrumb-item + .breadcrumb-item::before{
-     color: #000000;
+     color: #610901;
 }
  .about-box-main{
      padding: 70px 0px;
@@ -1592,7 +1592,7 @@
      width: 100%;
      height: 5px;
      border-radius: 0px;
-     background: #000000;
+     background: #610901;
      position: absolute;
      top: 0;
      left: 0;
@@ -1696,7 +1696,7 @@
      width: 35px;
      height: 35px;
      line-height: 35px;
-     background: #000000;
+     background: #610901;
      font-size: 17px;
      color: #fff;
      opacity: 0.9;
@@ -1778,7 +1778,7 @@
      opacity: 1;
 }
  .search-product button {
-     background: #000000;
+     background: #610901;
      color: #ffffff;
      font-size: 18px;
      position: absolute;
@@ -1798,7 +1798,7 @@
 }
  .title-left{
      font-size: 16px;
-     border-bottom: 3px solid #000000;
+     border-bottom: 3px solid #610901;
      margin-bottom: 20px;
 }
  .title-left h3{
@@ -1869,7 +1869,7 @@
      border-radius: 0;
 }
  #slider-range {
-     background: #000000;
+     background: #610901;
      border: medium none;
      border-radius: 50px;
      float: left;
@@ -1898,8 +1898,8 @@
      position: relative;
 }
  .product-item-filter{
-     border-bottom: 1px solid #000000;
-     border-top: 1px solid #000000;
+     border-bottom: 1px solid #610901;
+     border-top: 1px solid #610901;
      display: -webkit-box;
      display: -ms-flexbox;
      display: -webkit-flex;
@@ -1937,7 +1937,7 @@
      padding-left: 15px;
 }
  .toolbar-sorter-right .btn-light{
-     background: #000000;
+     background: #610901;
      color: #ffffff;
 }
  .toolbar-sorter-right .btn-light:hover{
@@ -1982,7 +1982,7 @@
      color: #ffffff;
 }
  .product-item-filter li .nav-link:hover {
-     background: #000000;
+     background: #610901;
      border: none;
      color: #ffffff;
 }
@@ -2005,7 +2005,7 @@
      color: #666;
 }
  .why-text.full-width h5{
-     color: #000000;
+     color: #610901;
      font-weight: 700;
 }
  .why-text.full-width p{
@@ -2054,7 +2054,7 @@
 }
  .quantity-box input{
      width: 60px;
-     border: 2px solid #000000;
+     border: 2px solid #610901;
      text-align: center;
 }
  .quantity-box input:focus{
@@ -2063,7 +2063,7 @@
  .name-pr a{
      font-weight: 700;
      font-size: 18px;
-     color: #000000;
+     color: #610901;
 }
  .remove-pr{
      text-align: center;
@@ -2076,10 +2076,10 @@
      box-shadow: none !important;
 }
  .coupon-box .input-group .form-control::-moz-placeholder{
-     color: #000000;
+     color: #610901;
 }
  .coupon-box .input-group .input-group-append .btn-theme {
-     background: #000000;
+     background: #610901;
      color: #ffffff;
      border: none;
      border-radius: 0px;
@@ -2090,7 +2090,7 @@
      background: #fac307;
 }
  .update-box input[type="submit"]{
-     background: #000000;
+     background: #610901;
      border: medium none;
      border-radius: 0;
      -webkit-box-shadow: none;
@@ -2190,7 +2190,7 @@
 }
  .new-account-login h5 {
      font-size: 18px;
-     color: #1111111;
+     color: #111111;
      font-weight: 600;
 }
  .new-account-login h5 a:hover{
@@ -2221,7 +2221,7 @@
      text-align: center;
      background: #ffffff;
      padding: 30px;
-     border: 1px solid #000000;
+     border: 1px solid #610901;
 }
  .bottom-box {
      border-top: 1px solid #eee;
@@ -2233,11 +2233,11 @@
      min-height: 205px;
 }
  .account-box {
-     border: 2px solid #000000;
+     border: 2px solid #610901;
      margin-top: 15px;
 }
  .my-account-page a{
-     color: #000000;
+     color: #610901;
 }
  .my-account-page a:hover{
      color: #fac307;
@@ -2470,7 +2470,7 @@
  .carousel-indicators{
      position: relative;
      bottom: 0;
-     background: #000000;
+     background: #610901;
 }
  .carousel-indicators li{
      width: 30%;
@@ -2478,7 +2478,7 @@
      cursor: pointer;
 }
  .single-product-details h2{
-     color: #000000;
+     color: #610901;
      font-weight: 700;
      font-size: 24px;
 }
@@ -2509,7 +2509,7 @@
  .single-product-details ul{
      display: inline-block;
      width: 100%;
-     border: 1px #000000 dashed;
+     border: 1px #610901 dashed;
      margin-bottom: 30px;
 }
  .single-product-details ul li{
@@ -2518,7 +2518,7 @@
      padding: 0px 15px;
 }
  .size-st .bootstrap-select > .dropdown-toggle.btn-light{
-     background: #000000;
+     background: #610901;
      border: none;
      border-radius: 0px;
      color: #ffffff;
@@ -2570,14 +2570,14 @@
      text-align: center;
 }
  .featured-products-box .owl-nav button.owl-prev{
-     background: #000000;
+     background: #610901;
      color: #ffffff;
      width: 38px;
      height: 38px;
      text-align: center;
 }
  .featured-products-box .owl-nav button.owl-next{
-     background: #000000;
+     background: #610901;
      color: #ffffff;
      width: 38px;
      height: 38px;

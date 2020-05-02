@@ -29,7 +29,7 @@
     height: 340px;
 }
 
-.about-more a{
+.about-more a, .title-all p a{
     color: #ffc107;
 }
 
