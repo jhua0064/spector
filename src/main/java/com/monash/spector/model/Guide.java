@@ -105,4 +105,6 @@ public class Guide {
     public void setSmell(Integer smell) {
         this.smell = smell;
     }
+
+
 }

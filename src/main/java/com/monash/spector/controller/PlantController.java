@@ -1,18 +1,23 @@
 package com.monash.spector.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.monash.spector.model.Guide;
 import com.monash.spector.model.Occurence;
 import com.monash.spector.model.Plant;
 import com.monash.spector.service.GuideService;
 import com.monash.spector.service.OccuService;
 import com.monash.spector.service.PlantService;
+import com.monash.spector.util.HibernateProxyTypeAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,7 +34,8 @@ public class PlantController {
 
     @RequestMapping("/plants")
     public String viewPlants(Model model){
-        List<Plant> plants = plantService.listAll();
+//        List<Plant> plants = plantService.listAll();
+        List<Plant> plants = plantService.listPlantsByPage(0);
         model.addAttribute("plants",new Gson().toJson(plants));
         return "gallery";
     }
@@ -43,6 +49,26 @@ public class PlantController {
         model.addAttribute("plant", plant);
         model.addAttribute("records",new Gson().toJson(records));
         return "detail";
+    }
+
+    @RequestMapping("/plantList")
+    public String viewPlantList(){
+        return "plant-list";
+    }
+
+    @PostMapping("/plantList/plants")
+    public ResponseEntity<?> getPlantsDetail(@RequestBody String data ){
+        JsonObject jobj = (JsonObject)new JsonParser().parse(data);
+        int id = jobj.get("id").getAsInt();
+        Plant plant  = plantService.getPlant(id);
+        Guide guide = guideService.getGuide(id);
+
+        GsonBuilder builder = new GsonBuilder();
+        builder.registerTypeAdapterFactory(HibernateProxyTypeAdapter.FACTORY);
+        Gson gson = builder.create();
+        String json = "{\"name\":"+"\""+plant.getcName()+"\""+", \"link\":"+"\""+plant.getImgLink()+"\""+", \"guide\":"+gson.toJson(guide)+"}";
+
+        return ResponseEntity.ok(json);
     }
 
 }

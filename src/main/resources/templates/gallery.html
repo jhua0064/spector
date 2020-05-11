@@ -51,15 +51,14 @@
                 </div>
                 <!-- End Header Navigation -->
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
+                <!-- Collect the nav links and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item active"><a class="nav-link" href="/plants">Plants</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link ">Weather</a></li>
-                        <li class="nav-item" ><a class="nav-link" href="/insect">Insects</a></li>
+                        <li class="nav-item" ><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
+                        <li class="nav-item"><a href="/plantList" class="nav-link ">Favorite Plants</a></li>
                         <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
-
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -96,8 +95,19 @@
                     <div class="title-all text-center">
                         <h1>Plants Gallery</h1>
                         <p>Choose features of plants to decorate your garden and attract bees!
-                            <a href="/more" data-toggle="popover" >
+                            <a href="/more#target-rule" data-toggle="popover" >
                                 <b>Tips</b></a></p>
+                        <br>
+                        <form>
+                            <input type="search" class="search-input" placeholder="Search Plants" required="required">
+                            <select class="search-select search-input">
+                                <option>All Filters</option>
+                                <option>Type</option>
+                                <option>Color</option>
+                                <option>Flowering Month</option>
+                            </select>
+                            <button class="search-button ml-auto">Search now</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -132,7 +142,7 @@
                 <div class="col-lg-12">
                     <div class="special-menu text-left">
                         <div class="button-group filter-button-group" data-filter-group="month">
-                            <button class="active" data-filter="">Flowering Month</button>
+                            <button class="active" data-filter="" id="test">Flowering Month</button>
                             <button data-filter=".1">1</button>
                             <button data-filter=".2">2</button>
                             <button data-filter=".3">3</button>
@@ -152,20 +162,6 @@
             </div>
 
             <div class="row special-list">
-                <div class="col-lg-3 col-md-6 special-grid yellow veg" id="9" style="position: absolute; left: 0px; top: 0px;">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <img src="/images/gallery-img-9.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                    <li><a href="/detail/9" data-toggle="tooltip" data-placement="right" title="view guide"><i class="fas fa-eye"></i></a></li>
-                                    <li hidden="hidden"><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                                <a class="cart" href="/detail/9">Palm Leaf Abika</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -296,8 +292,8 @@
                 trigger: 'hover',
                 title: 'Do you know ?',
                 html:true,
-                content: 'Bees find blue, purple and yellow flowers most appealing <br>' +
-                    'Herbs and Edible Flowers are always helpful'
+                content: 'Bees find blue, purple and yellow flowers most appealing. <br>' +
+                    'Herbs and Edible Flowers are always helpful.'
 
             });
 
@@ -313,13 +309,13 @@
                 $('.special-list').append('<div class="col-lg-3 col-md-6 special-grid" id='+ plant.id +'>\n' +
                     '                    <div class="products-single fix">\n' +
                     '                        <div class="box-img-hover">\n' +
+                    '<div class="type-lb" style="display: none"> <p class="sale"><i class="far fa-heart"></i>     </p> </div>\n' +
                     '                            <img src='+ plant.imgLink +' class="img-fluid" alt="Image">\n' +
                     '                            <div class="mask-icon">\n' +
                     '                                <ul>\n' +
-                    '                                    <li><a href="/detail/'+plant.id +'" data-toggle="tooltip" data-placement="right" title="view guide"><i class="fas fa-eye"></i></a></li>\n' +
-                    '                                    <li hidden="hidden"><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>\n' +
+                    '                                    <li ><a href="#" data-toggle="tooltip" data-placement="right" title="Add to favorite list"><i class="far fa-heart"></i></a></li>\n' +
                     '                                </ul>\n' +
-                    '                                <a class="cart" href="/detail/'+plant.id +'">'+ plant.cName +'</a>\n' +
+                    '                                <a class="cart" href="/detail/'+plant.id +'" data-toggle="tooltip" title="View Detail">'+ plant.cName +'</a>\n' +
                     '                            </div>\n' +
                     '                        </div>\n' +
                     '                    </div>\n' +
@@ -342,13 +338,72 @@
                 }
             }
             function buildGrid() {
-                for(var i = 1; i< plants.length; i++){
-                    createDiv(plants[i]);
-                }
+
+                        for(var i in plants){
+                            createDiv(plants[i]);
+                        }
             }
             buildGrid();
 
+            showHeartIcon();
+            function showHeartIcon() {
+                let list = JSON.parse(sessionStorage.getItem('list'));
+                for(var i in list){
+                    var pId = list[i].id;
+                    $('#'+pId+' .type-lb').show();
+                }
+            }
 
+            function addToFavorite() {
+                $('.mask-icon li a').on('click',function (e) {
+                    e.preventDefault();
+
+                    var pId = $(this.closest('.special-grid'))[0].id;
+
+                    var list = sessionStorage.getItem('list');
+                    list = JSON.parse(list);
+                    if(list[0] == null){
+                        list = [];
+                    }else{
+                        for (let i = 0; i < list.length; i++) {
+                            if(list[i]['id'] === pId){
+                                return;
+                            }
+                        }
+                    }
+                    var d = $(this.closest('.box-img-hover'))[0];
+                    var t = d.children[0];
+                    t.style.display = 'block';
+
+                    setData(pId, list);
+
+                })
+            }
+
+            function setData(id, list) {
+                let data = {'id': id};
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "/plantList/plants",
+                    data: JSON.stringify(data),
+                    dataType: 'json',
+                    cache: false,
+                    timeout: 60000,
+                    success: function (data) {
+                        var info = data['guide'];
+                        info['name'] = data['name'];
+                        info['link'] = data['link'];
+                        list.push(info);
+
+                        sessionStorage.setItem('list', JSON.stringify(list));
+                    },
+                    error: function (e) {
+                        console.log("ERROR : ", e);
+                    }
+                });
+            }
+            addToFavorite();
         });
 
     </script>

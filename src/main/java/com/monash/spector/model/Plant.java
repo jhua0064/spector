@@ -85,4 +85,6 @@ public class Plant {
     public void setImgLink(String imgLink) {
         this.imgLink = imgLink;
     }
+
+
 }

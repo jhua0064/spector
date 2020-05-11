@@ -1,7 +1,12 @@
+/** ADD YOUR AWESOME CODES HERE **/
 .guide-title{
     font-size: 20px;
     font-weight: bolder;
     margin-right: 3%;
+}
+.list-title{
+    font-weight: bolder;
+    margin-left: 3%;
 }
 
 .box-img-hover .img-fluid{
@@ -9,6 +14,14 @@
     height: 170px;
 }
 
+.box-img-hover .img-detail{
+    width: 100%;
+    height: 300px;
+}
+
+.why-text{
+    width: 100%;
+}
 .shop-cat-box .img-fluid{
     width: 354px;
     height: 354px;
@@ -29,8 +42,161 @@
     height: 340px;
 }
 
-.about-more a, .title-all p a{
+.about-more a, .title-all p a, .title-all h1 a{
     color: #ffc107;
 }
 
-/** ADD YOUR AWESOME CODES HERE **/
+
+.weather
+{
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: 0px 1px 10px 0px #cfcfcf;
+    overflow: hidden;
+}
+
+.weather .current
+{
+    display: flex;
+    flex-flow: row wrap;
+    background-image: url("/images/london-view.png");
+    background-repeat: repeat-x;
+    color: white;
+    padding: 20px;
+    text-shadow: 1px 1px #F68D2E;
+}
+
+.weather .current .info
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    flex-grow: 2;
+}
+
+.weather .current .info .city
+{
+    font-size: 26px;
+}
+
+.weather .current .info .temp
+{
+    font-size: 56px;
+}
+
+.weather .current .info .wind
+{
+    font-size: 24px;
+}
+
+.weather .current .icon
+{
+    text-align: center;
+    font-size: 64px;
+    flex-grow: 1;
+}
+
+.weather .future
+{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.weather .future .day
+{
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.weather .future .day:hover
+{
+    color: #fff;
+    background-color: #F68D2E;
+}
+
+.weather .future .day h3
+{
+    text-transform: uppercase;
+}
+
+.weather .future .day p
+{
+    font-size: 28px;
+}
+
+.search-input{
+    width: 240px;
+    height: 46px;
+    border: solid 1px #d9d9d9;
+    border-radius: 3px;
+    background: #FFFFFF;
+    padding-left: 20px;
+}
+
+.search-select{
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    background-image: url(/images/down.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.search-button{
+    width: 161px;
+    height: 46px;
+    background: #610901;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.pest-msg{
+    text-align: center;
+    margin-bottom: 5%;
+}
+.pest-msg h4, .pest-msg p{
+    font-weight: bold;
+}
+.pest-result h4{
+    padding-left: 5%;
+}
+.pest-result p, .pest-msg p{
+    padding-left: 8%;
+}
+.pest-result label{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.pest-result .special-grid{
+    padding-bottom: 3%;
+}
+
+.bee-affect{
+    color: #fac307;
+    font-weight: bold;
+}
+
+.add-to-list{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.add-to-list a{
+    color: #FFFFFF;
+}

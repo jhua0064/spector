@@ -951,7 +951,7 @@
      background: #f5f5f5;
      padding: 15px;
 }
- .why-text h4{
+ .why-text h4, .pest-result h4{
      font-size: 16px;
      font-weight: 700;
      padding-bottom: 15px;
@@ -1757,14 +1757,14 @@
      position: relative;
 }
  .search-product input[type="text"] {
-     background: #333333;
+     background: #fff3cd;
      border: 0;
      box-shadow: none;
      border-radius: 0;
-     color: #ffffff;
+     color: #0b2e13;
      height: 55px;
      font-weight: 300;
-     font-size: 16px;
+     font-size: 18px;
      margin-bottom: 15px;
      padding: 0 20px;
      -webkit-transition: all .5s ease;
@@ -2367,11 +2367,7 @@
  .contact-box-main{
      padding: 70px 0px;
 }
- .contact-info-left{
-     padding: 20px;
-     background: url(../images/contact-bg.jpg) no-repeat center;
-	 background-size: cover;
-}
+
  .contact-info-left h2{
      font-size: 22px;
      font-weight: 700;

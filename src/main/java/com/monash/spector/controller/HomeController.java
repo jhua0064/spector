@@ -18,7 +18,6 @@ public class HomeController {
         return "index";
     }
 
-
     @RequestMapping("/about")
     public String aboutPage(){
         return "about";
@@ -29,10 +28,6 @@ public class HomeController {
         return "about-more";
     }
 
-    @RequestMapping("/insect")
-    public String contactPage(){
-        return "insect";
-    }
 
 
 }
