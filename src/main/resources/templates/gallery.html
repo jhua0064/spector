@@ -27,6 +27,10 @@
     <link rel="stylesheet" href="/css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/custom.css">
+    <!--font awsome css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--introjs css-->
+    <link rel="stylesheet" href="/css/intro-js.css">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -53,7 +57,7 @@
 
                 <!-- Collect the nav links and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp" >
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item active"><a class="nav-link" href="/plants">Plants</a></li>
                         <li class="nav-item" ><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
@@ -72,10 +76,10 @@
 
 
     <!-- Start All Title Box -->
-    <div class="all-title-box">
+    <div class="all-title-box" >
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" >
                     <h2>Choose plants you like to be at your garden!</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -88,73 +92,73 @@
     <!-- End All Title Box -->
 
     <!-- Start Gallery  -->
-    <div class="products-box">
+    <div class="products-box" >
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
+            <div class="row" id="specialDiv">
+                <div class="col-lg-12" >
+                    <p style="font-size: 18px">Need Help? <span class="blink" style="color: #ffc107; cursor: pointer" >Start Guide</span></p>
                     <div class="title-all text-center">
-                        <h1>Plants Gallery</h1>
+
+                        <h1 class="data-intro" >Plants Gallery</h1>
                         <p>Choose features of plants to decorate your garden and attract bees!
                             <a href="/more#target-rule" data-toggle="popover" >
                                 <b>Tips</b></a></p>
                         <br>
-                        <form>
+                        <form class="data-intro">
                             <input type="search" class="search-input" placeholder="Search Plants" required="required">
-                            <select class="search-select search-input">
-                                <option>All Filters</option>
-                                <option>Type</option>
-                                <option>Color</option>
-                                <option>Flowering Month</option>
-                            </select>
+
                             <button class="search-button ml-auto">Search now</button>
                         </form>
+                        <button class="btn hvr-hover show-filter" style="position: absolute; bottom: 30px;right: 0px;width: 150px;
+    height: 46px;color: white; display: none">Show Filters</button>
+
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 data-intro" >
                     <div class="special-menu text-left">
                         <div class="button-group filter-button-group" data-filter-group="type">
-                            <button class="active" data-filter="">All Type</button>
-                            <button data-filter=".herb">Herb</button>
-                            <button data-filter=".shrub">Shrub</button>
-                            <button data-filter=".tree">Tree</button>
-                            <button data-filter=".veg">Vegetable</button>
-                            <button data-filter=".aquatic">Aquatic</button>
+                            <button class="active" data-filter="all">All Type</button>
+                            <button data-filter="herb">Herb</button>
+                            <button data-filter="shrub">Shrub</button>
+                            <button data-filter="tree">Tree</button>
+                            <button data-filter="veg">Vegetable</button>
+                            <button data-filter="aquatic">Aquatic</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-12">
+                <div class="col-lg-12 data-intro" >
                     <div class="special-menu text-left">
                         <div class="button-group filter-button-group" data-filter-group="color">
-                            <button class="active" data-filter="">All Color</button>
-                            <button data-filter=".blue">Blue</button>
-                            <button data-filter=".purple">Purple</button>
-                            <button data-filter=".yellow">Yellow</button>
-                            <button data-filter=".white">White</button>
-                            <button data-filter=".red">Red</button>
-                            <button data-filter=".orange">Orange</button>
-                            <button data-filter=".pink">Pink</button>
+                            <button class="active" data-filter="all">All Color</button>
+                            <button data-filter="blue">Blue</button>
+                            <button data-filter="purple">Purple</button>
+                            <button data-filter="yellow">Yellow</button>
+                            <button data-filter="white">White</button>
+                            <button data-filter="red">Red</button>
+                            <button data-filter="orange">Orange</button>
+                            <button data-filter="pink">Pink</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 data-intro">
                     <div class="special-menu text-left">
                         <div class="button-group filter-button-group" data-filter-group="month">
-                            <button class="active" data-filter="" id="test">Flowering Month</button>
-                            <button data-filter=".1">1</button>
-                            <button data-filter=".2">2</button>
-                            <button data-filter=".3">3</button>
-                            <button data-filter=".4">4</button>
-                            <button data-filter=".5">5</button>
-                            <button data-filter=".6">6</button>
-                            <button data-filter=".7">7</button>
-                            <button data-filter=".8">8</button>
-                            <button data-filter=".9">9</button>
-                            <button data-filter=".10">10</button>
-                            <button data-filter=".11">11</button>
-                            <button data-filter=".12">12</button>
+                            <button class="active" data-filter="all">Flowering Month</button>
+                            <button data-filter="1">1</button>
+                            <button data-filter="2">2</button>
+                            <button data-filter="3">3</button>
+                            <button data-filter="4">4</button>
+                            <button data-filter="5">5</button>
+                            <button data-filter="6">6</button>
+                            <button data-filter="7">7</button>
+                            <button data-filter="8">8</button>
+                            <button data-filter="9">9</button>
+                            <button data-filter="10">10</button>
+                            <button data-filter="11">11</button>
+                            <button data-filter="12">12</button>
                         </div>
                     </div>
                 </div>
@@ -163,6 +167,12 @@
 
             <div class="row special-list">
 
+            </div>
+            <div style="text-align: center">
+                <ul class="pagination modal">
+
+                </ul>
+                <span id="pages" style="visibility: hidden" total-page=1 />
             </div>
         </div>
     </div>
@@ -279,12 +289,12 @@
     <script src="/js/inewsticker.js"></script>
     <script src="/js/bootsnav.js"></script>
     <script src="/js/images-loded.min.js"></script>
-    <script src="/js/isotope.min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/baguetteBox.min.js"></script>
     <script src="/js/form-validator.min.js"></script>
     <script src="/js/contact-form-script.js"></script>
     <script src="/js/custom.js"></script>
+    <script src="/js/intro.js"></script>
     <script>
         $(function () {
             $('[data-toggle="popover"]').popover({
@@ -300,10 +310,6 @@
 
             let msg = "[[${plants}]]";
             var plants = $.parseJSON(msg.replace(/&quot;/g,'"'));
-            for(var p in plants){
-                var season = plants[p]["season"].split(',')
-                plants[p]["season"] = season;
-            }
 
             function createDiv(plant) {
                 $('.special-list').append('<div class="col-lg-3 col-md-6 special-grid" id='+ plant.id +'>\n' +
@@ -321,31 +327,230 @@
                     '                    </div>\n' +
                     '                </div>');
 
-                $('#'+plant.id).addClass(plant.color)
-                var type = plant.type;
-                if(type == "fruit/vegetable"){
-                    $('#'+plant.id).addClass("veg");
-                }else{
-                    $('#'+plant.id).addClass(type);
-                };
-
-                var season = plant.season;
-                for(var i in season){
-                    if(season[i] == 'n'){
-                        break;
+            }
+            function buildGrid(plants) {
+                $('.container').imagesLoaded(function () {
+                    $('.special-list').empty();
+                    for(var i = 0; i< plants.length; i++){
+                        createDiv(plants[i]);
                     }
-                    $('#'+plant.id).addClass(''+season[i]);
+                    showHeartIcon();
+                    addToFavorite();
+                });
+
+            }
+
+            buildGrid(plants);
+
+            var totalPages = [[${totalPages}]];
+            //for pageFunction()
+            $('#pages').attr('total-page',totalPages);
+
+            function showPage(totalPages) {
+                $('.pagination').append(' <li><a href="#" class="prev" page-num="0">\n' +
+                    '                            <i class="fa fa-chevron-left"></i>\n' +
+                    '                            Previous\n' +
+                    '                        </a></li>')
+                for (let i = 0; i <totalPages ; i++) {
+                    $(".pagination").append('<li><a href="#" class="page" page-num="'+(i+1)+'">'+(i+1)+'</a></li>')
                 }
+                $(".pagination").append(' <li><a href="#" class="next" page-num="2"> Next\n' +
+                    '                            <i class="fa fa-chevron-right"></i>\n' +
+                    '                        </a></li>')
+                $(".page[page-num='1']").addClass('active');
             }
-            function buildGrid() {
+            showPage(totalPages);
 
-                        for(var i in plants){
-                            createDiv(plants[i]);
+            pageAnimation();
+
+            /*page animation*/
+            function pageAnimation() {
+
+                $('.page').on('click', function (e) {
+                    e.preventDefault();
+                    $('.page.active').removeClass('active');
+                    $(this).addClass('active');
+                    var pagNum = parseInt($(this).attr('page-num'));
+                    pageFunction()
+                    $('.prev').attr('page-num',pagNum-1);
+                    $('.next').attr('page-num', pagNum+1);
+
+                })
+                $('.prev').on('click',function (e) {
+                    e.preventDefault();
+                    var pageNum = parseInt($(this).attr('page-num'));
+                    if(pageNum === 0){
+                        return;
+                    }
+                    $('.page.active').removeClass('active');
+                    $('.page[page-num='+pageNum+']').addClass('active');
+                    pageFunction();
+                    $('.next').attr('page-num',pageNum+1);
+                    $('.prev').attr('page-num',pageNum-1);
+
+                })
+                $('.next').on('click',function (e) {
+                    e.preventDefault();
+                    var pageNum = parseInt($(this).attr('page-num'));
+                    var totalPages = parseInt($('#pages').attr('total-page'));
+                    if(pageNum === totalPages+1){
+                        return;
+                    }
+                    $('.page.active').removeClass('active');
+                    $('.page[page-num='+pageNum+']').addClass('active');
+                    pageFunction()
+                    $('.prev').attr('page-num',pageNum-1);
+                    $('.next').attr('page-num',pageNum+1);
+                })
+            }
+
+            /*get filter data*/
+            function getFilterData() {
+                var filterData = {};
+                var pagNum = parseInt($('.pagination a.active').attr('page-num'));
+                var color = $('.filter-button-group[data-filter-group="color"] button.active').attr('data-filter');
+                var type = $('.filter-button-group[data-filter-group="type"] button.active').attr('data-filter');
+                var month = $('.filter-button-group[data-filter-group="month"] button.active').attr('data-filter');
+                filterData['color'] = color;
+                filterData['type'] = type;
+                filterData['month'] = month;
+                filterData['page'] = pagNum;
+
+                return filterData;
+            }
+
+            function pageFunction() {
+                    let pageNum =parseInt($(this).attr('page-num'));
+                    let totalPages = parseInt($('#pages').attr('total-page'));
+                    if(pageNum === 0 || pageNum === totalPages+1 ){
+                        return;
+                    }
+                    let filterData = getFilterData();
+
+                    var funcName = function(plantData){
+
+                        let plants = plantData['plants'];
+                        buildGrid(plants);
+                        window.location.href="#specialDiv";
+                    }
+
+                    dealDataFromAjax("/page/filter", filterData, funcName);
+
+            }
+
+
+
+            filterPage();
+
+            function filterPage() {
+
+                let portfolio = $('.special-menu');
+                portfolio.on('click','button',function (e) {
+                    $(this).addClass('active').siblings().removeClass('active');
+
+                    let filterData = getFilterData();
+                    filterData['page'] = 1;
+
+                    let funcName = function(plantData){
+                        let plants = plantData['plants'];
+                        $('.pagination').empty();
+                        let totalPage = plantData['page'];
+                        $('#pages').attr('total-page', totalPage);
+                        if(totalPage > 1){
+                            showPage(totalPage);
                         }
-            }
-            buildGrid();
 
-            showHeartIcon();
+                        pageAnimation();
+                        buildGrid(plants);
+                    }
+
+                    dealDataFromAjax("/page/filter", filterData, funcName);
+
+                })
+            }
+
+            search();
+            function search() {
+                $('.search-button').on('click',function (e) {
+                    let searchName = $('.search-input').val().trim();
+                    if(searchName.length === 0){
+                        return;
+                    }
+                    e.preventDefault();
+                    $('.special-menu').hide();
+                    $('.show-filter').show();
+                    let data = {'name':searchName};
+                    $('.pagination').empty();
+
+                    var funcName = function (plantData) {
+                        if(plantData.length > 40){
+                            plantData = plantData.slice(0,40);
+                        }
+                        buildGrid(plantData);
+                    };
+                    dealDataFromAjax("/plant/search", data, funcName);
+                })
+
+                $('.show-filter').on('click',function () {
+                    $('.special-menu').show();
+                    $('.show-filter').hide();
+                })
+            }
+
+            function dealDataFromAjax(url, dataParam, funcName) {
+                $.ajax({
+                    type:"POST",
+                    contentType: "application/json",
+                    url: url,
+                    data: JSON.stringify(dataParam),
+                    dataType: 'json',
+                    cache: false,
+                    timeout: 60000,
+                    success: function (data) {
+                        funcName(data);
+                    },
+                    error: function (e) {
+                        console.log("ERROR : ", e);
+                    }
+                });
+            }
+
+
+            guideText();
+            function guideText() {
+                function blink_text() {
+                    $('.blink').fadeOut(500);
+                    $('.blink').fadeIn(500);
+                }
+                setInterval(blink_text, 1500);
+
+                $('.blink').on('click',function () {
+                    $("html, body").animate({
+                        scrollTop: 100
+                    }, 600);
+                    setTimeout(function () {
+                        introJs().start();
+                    }, 1000);
+
+                })
+            }
+
+            setGuideInfo();
+            function setGuideInfo() {
+                let info = [];
+                info[0] = "You can find more than 300 bee friendly plants at this page gallery.....";
+                info[1] = "If you want to know a certain plant, You can type name here to check it.... ";
+                info[2] = "If you do not know any specific plants. Dont worry, we offer filters to help you find your favorite plant...";
+                info[3] = "You can filter color here!";
+                info[4] = "You can also select plant by flowering month";
+                let i = 0;
+                $('.data-intro').each(function () {
+                    $(this).attr('data-intro', info[i]);
+                    i += 1;
+                })
+            }
+
+
             function showHeartIcon() {
                 let list = JSON.parse(sessionStorage.getItem('list'));
                 for(var i in list){
@@ -357,9 +562,7 @@
             function addToFavorite() {
                 $('.mask-icon li a').on('click',function (e) {
                     e.preventDefault();
-
                     var pId = $(this.closest('.special-grid'))[0].id;
-
                     var list = sessionStorage.getItem('list');
                     list = JSON.parse(list);
                     if(list[0] == null){
@@ -403,7 +606,7 @@
                     }
                 });
             }
-            addToFavorite();
+
         });
 
     </script>

@@ -14,6 +14,7 @@ import com.monash.spector.service.OccuService;
 import com.monash.spector.service.PlantService;
 import com.monash.spector.util.HibernateProxyTypeAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,9 +35,10 @@ public class PlantController {
 
     @RequestMapping("/plants")
     public String viewPlants(Model model){
-//        List<Plant> plants = plantService.listAll();
-        List<Plant> plants = plantService.listPlantsByPage(0);
-        model.addAttribute("plants",new Gson().toJson(plants));
+        Page<Plant> plants = plantService.listPlantsByPage(0);
+        int totalPages = plants.getTotalPages();
+        model.addAttribute("plants",new Gson().toJson(plants.getContent()));
+        model.addAttribute("totalPages",totalPages);
         return "gallery";
     }
 
@@ -71,4 +73,28 @@ public class PlantController {
         return ResponseEntity.ok(json);
     }
 
+    @PostMapping("/page/filter")
+    public ResponseEntity<?>  getFilterPlants(@RequestBody String data){
+        JsonObject jobj = (JsonObject)new JsonParser().parse(data);
+        String color = jobj.get("color").getAsString();
+        color = ("all".equals(color)) ? "" : color;
+        String type = jobj.get("type").getAsString();
+        type = ("all".equals(type)) ? "" : type;
+        String season = jobj.get("month").getAsString();
+        season = ("all".equals(season)) ? "" : season;
+        int page = jobj.get("page").getAsInt();
+        Page<Plant> plants = plantService.listPlantsByFilter(color, type, season, page-1);
+        String s = new Gson().toJson(plants.getContent());
+        s = "{\"page\":"+plants.getTotalPages()+", \"plants\":"+s+"}";
+        return ResponseEntity.ok(s);
+    }
+
+    @PostMapping("/plant/search")
+    public ResponseEntity<?> getSearchedPlants(@RequestBody String data ){
+        JsonObject jobj = (JsonObject)new JsonParser().parse(data);
+        String name = jobj.get("name").getAsString();
+        List<Plant> plants  = plantService.listSearchedPlants(name);
+
+        return ResponseEntity.ok(new Gson().toJson(plants));
+    }
 }

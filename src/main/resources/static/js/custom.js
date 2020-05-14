@@ -74,6 +74,9 @@
 	};
 
 	Container.imagesLoaded(function() {
+		if($('.navbar-nav .active a').text() === "Plants"){
+			return;
+		}
 		var portfolio = $('.special-menu');
 		portfolio.on('click', 'button', function(e) {
 			$(this).addClass('active').siblings().removeClass('active');
@@ -158,6 +161,8 @@
 	   Featured Products
 	   ................................................. */
 
+
+
 	$('.featured-products-box').owlCarousel({
 		loop: true,
 		margin: 15,
@@ -204,6 +209,7 @@
 	});
 
 
+
 	/* ..............................................
 	   Slider Range
 	   ................................................. */
@@ -230,5 +236,81 @@
 		cursorcolor: "#9b9b9c",
 	});
 	*/
-	
+
+	$(function () {
+		if($('.weather')){
+			showWeather();
+		}
+		function showWeather() {
+			let localGeo = {"longitude": 144.9633, "latitude": -37.8184};
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosition((position) => {
+					localGeo.longitude = position.coords.longitude;
+					localGeo.latitude = position.coords.latitude;
+				});
+			}
+
+			const icons = {
+				'clear-day': "wi-day-sunny",
+				'clear-night': "wi-night-clear",
+				'rain': "wi-rain",
+				'snow': "wi-snow",
+				'sleet': "wi-sleet",
+				'wind': "wi-strong-wind",
+				'fog': "wi-day-fog",
+				'cloudy': "wi-cloudy",
+				'partly-cloudy-day': "wi-day-cloudy",
+				'partly-cloudy-night': "wi-night-alt-cloudy",
+				'default':'wi-cloud'
+			};
+			const iconMap = new Map(Object.entries(icons));
+
+			let weather = function (data) {
+				let city = data['timezone'];
+
+				$('.city span').text(city);
+
+				let current = data['currently'];
+				$('.current .icon p').text(current['summary']);
+				$('.current .icon span').addClass(iconMap.get(current['icon']))
+				$('.current .temp span').html(current['temperature']+"&deg;");
+				$('.current .wind .wind-val').text(current['windSpeed']);
+				$('.current .wind .humid').text(current['humid']);
+				$('.current .wind .pressure').text(current['pressure']);
+
+				let daily = data['daily']['data'];
+				let i = 2;
+				$('.day').each(function () {
+					let datWeather = daily[i];
+					let date = new Date(Number(datWeather['time']+'000')).toDateString().substring(0,3);
+					$('h3', this).text(date);
+					$('span', this).addClass(iconMap.get(datWeather['icon']));
+					$('.temp',this).html(datWeather['temperatureLow']+'&deg; - '+datWeather['temperatureHigh'] + "&deg;")
+					i += 1
+				})
+
+			}
+			dealDataFromAjax("/weather",localGeo, weather);
+
+		}
+			})
+
+	function dealDataFromAjax(url, dataParam, funcName) {
+		$.ajax({
+			type:"POST",
+			contentType: "application/json",
+			url: url,
+			data: JSON.stringify(dataParam),
+			dataType: 'json',
+			cache: false,
+			timeout: 60000,
+			success: function (data) {
+				funcName(data);
+			},
+			error: function (e) {
+				console.log("ERROR : ", e);
+			}
+		});
+	}
+
 }(jQuery));

@@ -116,7 +116,7 @@
         </div>
         <div class="search-product">
             <form action="#">
-                <input class="form-control" placeholder="Type pesticide name here..." type="text">
+                <input class="form-control" placeholder="Type pesticide name here..." type="text" required="required">
                 <button type="submit" id="form-submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
@@ -266,8 +266,12 @@
 
     function checkPest() {
         $('#form-submit').on('click', function (e) {
-            e.preventDefault();
             let param = $('.form-control').val().trim();
+            if(param.length === 0){
+                return;
+            }
+            e.preventDefault();
+
             let data = {'param': param};
             $.ajax({
                 type: "POST",
