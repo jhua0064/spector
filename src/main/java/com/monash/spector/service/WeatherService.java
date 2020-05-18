@@ -8,6 +8,9 @@ import tk.plogitech.darksky.forecast.*;
 import tk.plogitech.darksky.forecast.model.Latitude;
 import tk.plogitech.darksky.forecast.model.Longitude;
 
+/**
+ * get weather data from dark-sky api
+ */
 public class WeatherService {
     final private static String API_KEY =  "6f767f9db62b02dd0ebe2b69013f4212";
 

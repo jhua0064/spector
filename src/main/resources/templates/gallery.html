@@ -33,558 +33,670 @@
     <link rel="stylesheet" href="/css/intro-js.css">
 
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
 
-    <!-- Start Main Top -->
-    <header class="main-header">
-        <!-- Start Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
-            <div class="container">
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+<!-- Start Main Top -->
+<header class="main-header">
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
+        <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
+                        aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                    <a class="navbar-brand" href="/"><img src="/images/logo.jpg"  class="logo" alt=""></a>
-                </div>
-                <!-- End Header Navigation -->
-
-                <!-- Collect the nav links and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp" >
-                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="/plants">Plants</a></li>
-                        <li class="nav-item" ><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
-                        <li class="nav-item"><a href="/plantList" class="nav-link ">Favorite Plants</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-
+                <a class="navbar-brand" href="/"><img src="/images/logo.jpg" class="logo" alt=""></a>
             </div>
+            <!-- End Header Navigation -->
 
-        </nav>
-        <!-- End Navigation -->
-    </header>
-    <!-- End Main Top -->
-
-
-    <!-- Start All Title Box -->
-    <div class="all-title-box" >
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12" >
-                    <h2>Choose plants you like to be at your garden!</h2>
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item active">Plants</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End All Title Box -->
-
-    <!-- Start Gallery  -->
-    <div class="products-box" >
-        <div class="container">
-            <div class="row" id="specialDiv">
-                <div class="col-lg-12" >
-                    <p style="font-size: 18px">Need Help? <span class="blink" style="color: #ffc107; cursor: pointer" >Start Guide</span></p>
-                    <div class="title-all text-center">
-
-                        <h1 class="data-intro" >Plants Gallery</h1>
-                        <p>Choose features of plants to decorate your garden and attract bees!
-                            <a href="/more#target-rule" data-toggle="popover" >
-                                <b>Tips</b></a></p>
-                        <br>
-                        <form class="data-intro">
-                            <input type="search" class="search-input" placeholder="Search Plants" required="required">
-
-                            <button class="search-button ml-auto">Search now</button>
-                        </form>
-                        <button class="btn hvr-hover show-filter" style="position: absolute; bottom: 30px;right: 0px;width: 150px;
-    height: 46px;color: white; display: none">Show Filters</button>
-
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 data-intro" >
-                    <div class="special-menu text-left">
-                        <div class="button-group filter-button-group" data-filter-group="type">
-                            <button class="active" data-filter="all">All Type</button>
-                            <button data-filter="herb">Herb</button>
-                            <button data-filter="shrub">Shrub</button>
-                            <button data-filter="tree">Tree</button>
-                            <button data-filter="veg">Vegetable</button>
-                            <button data-filter="aquatic">Aquatic</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 data-intro" >
-                    <div class="special-menu text-left">
-                        <div class="button-group filter-button-group" data-filter-group="color">
-                            <button class="active" data-filter="all">All Color</button>
-                            <button data-filter="blue">Blue</button>
-                            <button data-filter="purple">Purple</button>
-                            <button data-filter="yellow">Yellow</button>
-                            <button data-filter="white">White</button>
-                            <button data-filter="red">Red</button>
-                            <button data-filter="orange">Orange</button>
-                            <button data-filter="pink">Pink</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 data-intro">
-                    <div class="special-menu text-left">
-                        <div class="button-group filter-button-group" data-filter-group="month">
-                            <button class="active" data-filter="all">Flowering Month</button>
-                            <button data-filter="1">1</button>
-                            <button data-filter="2">2</button>
-                            <button data-filter="3">3</button>
-                            <button data-filter="4">4</button>
-                            <button data-filter="5">5</button>
-                            <button data-filter="6">6</button>
-                            <button data-filter="7">7</button>
-                            <button data-filter="8">8</button>
-                            <button data-filter="9">9</button>
-                            <button data-filter="10">10</button>
-                            <button data-filter="11">11</button>
-                            <button data-filter="12">12</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row special-list">
-
-            </div>
-            <div style="text-align: center">
-                <ul class="pagination modal">
-
+            <!-- Collect the nav links and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/plants">Plants</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
+                    <li class="nav-item"><a href="/plantList" class="nav-link ">Favorite Plants</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
                 </ul>
-                <span id="pages" style="visibility: hidden" total-page=1 />
+            </div>
+            <!-- /.navbar-collapse -->
+
+        </div>
+
+    </nav>
+    <!-- End Navigation -->
+</header>
+<!-- End Main Top -->
+
+
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Grow bee friendly plants you like in your garden!</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active">Plants</li>
+                </ul>
             </div>
         </div>
     </div>
-    <!-- End Gallery  -->
+</div>
+<!-- End All Title Box -->
 
-    <!-- Start Instagram Feed  -->
-    <div class="instagram-box">
-        <div class="main-instagram owl-carousel owl-theme">
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="/images/instagram-img-01.jpg" alt="" />
-                    <!-- <div class="hov-in">
-                         <a href="#"><i class="fab fa-instagram"></i></a>
-                     </div>-->
+<!-- Start Gallery  -->
+<div class="products-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p style="font-size: 24px; " align="right"><span class="blink" style="color: #ffc107; cursor: pointer">Start Guide</span>
+                </p>
+                <div class="title-all text-center">
+
+                    <h1 class="data-intro">Bee friendly Plants</h1>
+                    <p><b>Choose features of plants to decorate your garden and attract bees!</b>
+                        <a href="/more#target-rule" data-toggle="popover">
+                            <b>Tips</b></a></p>
+                    <br>
+                    <form class="data-intro">
+                        <input type="search" class="search-input" placeholder="Search Plants" required="required">
+
+                        <button class="search-button ml-auto">Search now</button>
+                    </form>
+                    <button class="btn hvr-hover show-filter" style="position: absolute; bottom: 30px;right: 0px;width: 150px;
+                height: 46px;color: white; display: none">Show Filters
+                    </button>
+
                 </div>
             </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="/images/instagram-img-02.jpg" alt="" />
+        </div>
+        <div class="row filter-menu">
+            <div class="col-lg-12 data-intro">
+                <div class="special-menu text-left ">
+                    <div class="button-group filter-button-group" data-filter-group="type">
+                        <button class="active" data-filter="all">All Type</button>
+                        <button data-filter="herb">Herb</button>
+                        <button data-filter="shrub">Shrub</button>
+                        <button data-filter="tree">Tree</button>
+                        <button data-filter="veg">Vegetable</button>
+                        <button data-filter="aquatic">Aquatic</button>
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="/images/instagram-img-03.jpg" alt="" />
+
+            <div class="col-lg-12 data-intro">
+                <div class="special-menu text-left">
+                    <div class="button-group filter-button-group" data-filter-group="color">
+                        <button class="active" data-filter="all">All Color</button>
+                        <button data-filter="blue">Blue</button>
+                        <button data-filter="purple">Purple</button>
+                        <button data-filter="yellow">Yellow</button>
+                        <button data-filter="white">White</button>
+                        <button data-filter="red">Red</button>
+                        <button data-filter="orange">Orange</button>
+                        <button data-filter="pink">Pink</button>
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="/images/instagram-img-04.jpg" alt="" />
+            <div class="col-lg-12 data-intro">
+                <div class="special-menu text-left">
+                    <div class="button-group filter-button-group" data-filter-group="month">
+                        <button class="active" data-filter="all">Flowering Month</button>
+                        <button data-filter="1">Jan</button>
+                        <button data-filter="2">Feb</button>
+                        <button data-filter="3">Mar</button>
+                        <button data-filter="4">Apr</button>
+                        <button data-filter="5">May</button>
+                        <button data-filter="6">Jun</button>
+                        <button data-filter="7">July</button>
+                        <button data-filter="8">Aug</button>
+                        <button data-filter="9">Sep</button>
+                        <button data-filter="10">Oct</button>
+                        <button data-filter="11">Nov</button>
+                        <button data-filter="12">Dec</button>
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="/images/instagram-img-05.jpg" alt="" />
-                </div>
+
+        </div>
+
+        <div class="row special-list">
+
+        </div>
+
+        <div style="text-align: center">
+            <ul class="pagination modal">
+
+            </ul>
+            <span id="pages" style="visibility: hidden" total-page=1 />
+        </div>
+    </div>
+
+</div>
+<!-- End Gallery  -->
+
+<!--show when no result back-->
+<div class="temp-msg container" style="visibility: hidden; height: 0;">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="title-all text-center">
+                <h1>Not Find Plants You Want ? Try Our Recommendation!</h1>
             </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="/images/instagram-img-06.jpg" alt="" />
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="/images/instagram-img-07.jpg" alt="" />
-                </div>
-            </div>
-            <div class="item">
-                <div class="ins-inner-box">
-                    <img src="/images/instagram-img-08.jpg" alt="" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="special-menu text-center recommendation ">
+                <div class="button-group filter-button-group">
+                    <button data-filter=".top-featured">User's Top Selection</button>
+                    <button data-filter=".best-seller">Our Best Recommendation</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Instagram Feed  -->
+
+    <div class="row special-rec-list ">
+        <div class="col-lg-3 col-md-6 special-grid best-seller">
+            <div class="products-single fix">
+                <div class="box-img-hover">
+                    <img src="/images/gallery-img-2299.jpg" class="img-fluid" alt="Image">
+                    <div class="mask-icon">
+                        <ul>
+                            <li><a href="/detail/2299" data-toggle="tooltip" data-placement="right" title="View Detail"><i
+                                    class="fas fa-eye"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="why-text">
+                    <h4>Sarsaparilla Vine</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 special-grid top-featured">
+            <div class="products-single fix">
+                <div class="box-img-hover">
+                    <img th:src="${topPlants.get(0).getImgLink()}" class="img-fluid" alt="Image">
+                    <div class="mask-icon">
+                        <ul>
+                            <li><a th:href="'/detail/'+${topPlants.get(0).getId()}" data-toggle="tooltip" data-placement="right" title="View"><i
+                                    class="fas fa-eye"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="why-text">
+                    <h4 th:text="${topPlants.get(0).getcName()}"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 special-grid top-featured">
+            <div class="products-single fix">
+                <div class="box-img-hover">
+                    <img th:src="${topPlants.get(1).getImgLink()}" class="img-fluid" alt="Image">
+                    <div class="mask-icon">
+                        <ul>
+                            <li><a th:href="'/detail/'+${topPlants.get(1).getId()}" data-toggle="tooltip" data-placement="right" title="View"><i
+                                    class="fas fa-eye"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="why-text">
+                    <h4 th:text="${topPlants.get(1).getcName()}"></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 special-grid best-seller">
+            <div class="products-single fix">
+                <div class="box-img-hover">
+                    <img src="/images/gallery-img-3673.jpg" class="img-fluid" alt="Image">
+                    <div class="mask-icon">
+                        <ul>
+                            <li><a href="/detail/3673" data-toggle="tooltip" data-placement="right" title="View Detail"><i
+                                    class="fas fa-eye"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="why-text">
+                    <h4>Blue Stars</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Start Instagram Feed  -->
+<div class="instagram-box">
+    <div class="main-instagram owl-carousel owl-theme">
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-01.jpg" alt=""/>
+                <!-- <div class="hov-in">
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                 </div>-->
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-02.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-03.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-04.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-05.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-06.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-07.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="item">
+            <div class="ins-inner-box">
+                <img src="/images/instagram-img-08.jpg" alt=""/>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Instagram Feed  -->
 
 
-    <!-- Start Footer  -->
-    <footer>
-        <div class="footer-main">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-widget">
-                            <h4>About Beeprotector</h4>
-                            <p>Australian native bees are under threat, in spite of the beauty and value of these remarkable insects. Our native bees delight observant gardeners with their dazzling colours and their fascinating behaviour. </p>
-                            <p>Our native bees are also vital pollinators --- they help our wildflowers to survive and increase the yield of many of our agricultural crops.</p>
-                        </div>
+<!-- Start Footer  -->
+<footer>
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-widget">
+                        <h4>About Beeprotector</h4>
+                        <p>Australian native bees are under threat, in spite of the beauty and value of these remarkable
+                            insects. Our native bees delight observant gardeners with their dazzling colours and their
+                            fascinating behaviour. </p>
+                        <p>Our native bees are also vital pollinators --- they help our wildflowers to survive and
+                            increase the yield of many of our agricultural crops.</p>
                     </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-link">
-                            <h4>Information</h4>
-                            <ul>
-                                <li><a href="/about">About Us</a></li>
-                                <li><a href="/more">More Detail to Bee Friendly Guide</a></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/more">More Detail to Bee Friendly Guide</a></li>
+                        </ul>
                     </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="footer-link-contact">
-                            <h4>Contact Us</h4>
-                            <ul>
-                                <li>
-                                    <p><i class="fas fa-map-marker-alt"></i>Address: Level 6, Building H <br>Monash University (Caulfield Campus)<br> VIC 3610 </p>
-                                </li>
-                                <li>
-                                    <p><i class="fas fa-envelope"></i>Email: lshi0018@student.monash.edu</p>
-                                </li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: Level 6, Building H <br>Monash
+                                    University (Caulfield Campus)<br> VIC 3610 </p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i>Email: lshi0018@student.monash.edu</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- End Footer  -->
-
-    <!-- Start copyright  -->
-    <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Beeprotector</a> Design By :
-            <a href="https://html.design/">Spector</a></p>
     </div>
-    <!-- End copyright  -->
+</footer>
+<!-- End Footer  -->
 
-    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+<!-- Start copyright  -->
+<div class="footer-copyright">
+    <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Beeprotector</a> Design By :
+        <a href="https://html.design/">Spector</a></p>
+</div>
+<!-- End copyright  -->
+
+<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
 
-    <!-- ALL JS FILES -->
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="/js/jquery.superslides.min.js"></script>
-    <script src="/js/bootstrap-select.js"></script>
-    <script src="/js/inewsticker.js"></script>
-    <script src="/js/bootsnav.js"></script>
-    <script src="/js/images-loded.min.js"></script>
-    <script src="/js/owl.carousel.min.js"></script>
-    <script src="/js/baguetteBox.min.js"></script>
-    <script src="/js/form-validator.min.js"></script>
-    <script src="/js/contact-form-script.js"></script>
-    <script src="/js/custom.js"></script>
-    <script src="/js/intro.js"></script>
-    <script>
-        $(function () {
-            $('[data-toggle="popover"]').popover({
-                placement : 'right',
-                trigger: 'hover',
-                title: 'Do you know ?',
-                html:true,
-                content: 'Bees find blue, purple and yellow flowers most appealing. <br>' +
-                    'Herbs and Edible Flowers are always helpful.'
+<!-- ALL JS FILES -->
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<!-- ALL PLUGINS -->
+<script src="/js/jquery.superslides.min.js"></script>
+<script src="/js/bootstrap-select.js"></script>
+<script src="/js/inewsticker.js"></script>
+<script src="/js/bootsnav.js"></script>
+<script src="/js/images-loded.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/isotope.min.js"></script>
+<script src="/js/form-validator.min.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/intro.js"></script>
+<script>
+    $(function () {
+        //set title tip
+        $('[data-toggle="popover"]').popover({
+            placement: 'right',
+            trigger: 'hover',
+            title: 'Do you know ?',
+            html: true,
+            content: 'Bees find blue, purple and yellow flowers most appealing. <br>' +
+                'Herbs and Edible Flowers are always helpful.'
 
+        });
+
+        let msg = "[[${plants}]]";
+        let plants = $.parseJSON(msg.replace(/&quot;/g, '"'));
+        // display initial plants
+        buildGrid(plants);
+
+        function createDiv(plant) {
+            $('.special-list').append('<div class="col-lg-3 col-md-6 special-grid" id=' + plant.id + '>\n' +
+                '                    <div class="products-single fix">\n' +
+                '                        <div class="box-img-hover">\n' +
+                '<div class="type-lb" style="display: none"> <p class="sale"><i class="far fa-heart"></i>     </p> </div>\n' +
+                '                            <img src=' + plant.imgLink + ' class="img-fluid" alt="Image">\n' +
+                '                            <div class="mask-icon list-icon">\n' +
+                '                                <ul>\n' +
+                '                                    <li ><a href="#" data-toggle="tooltip" data-placement="right" title="Add to favorite list"><i class="far fa-heart"></i></a></li>\n' +
+                '                                </ul>\n' +
+                '                                <a class="cart" href="/detail/' + plant.id + '" data-toggle="tooltip" title="View Detail">' + plant.cName + '</a>\n' +
+                '                            </div>\n' +
+                '                        </div>\n' +
+                '                    </div>\n' +
+                '                </div>');
+
+        }
+
+        function buildGrid(plants) {
+            $('.container').imagesLoaded(function () {
+                $('.special-list').empty();
+                for (var i = 0; i < plants.length; i++) {
+                    createDiv(plants[i]);
+                }
+                showHeartIcon();
+                addToFavorite();
             });
 
+        }
 
-            let msg = "[[${plants}]]";
-            var plants = $.parseJSON(msg.replace(/&quot;/g,'"'));
+        let totalPages = [[${totalPages}]];
+        //for pageFunction()
+        $('#pages').attr('total-page', totalPages);
+        showPage(totalPages);
+        pageAnimation();
 
-            function createDiv(plant) {
-                $('.special-list').append('<div class="col-lg-3 col-md-6 special-grid" id='+ plant.id +'>\n' +
-                    '                    <div class="products-single fix">\n' +
-                    '                        <div class="box-img-hover">\n' +
-                    '<div class="type-lb" style="display: none"> <p class="sale"><i class="far fa-heart"></i>     </p> </div>\n' +
-                    '                            <img src='+ plant.imgLink +' class="img-fluid" alt="Image">\n' +
-                    '                            <div class="mask-icon">\n' +
-                    '                                <ul>\n' +
-                    '                                    <li ><a href="#" data-toggle="tooltip" data-placement="right" title="Add to favorite list"><i class="far fa-heart"></i></a></li>\n' +
-                    '                                </ul>\n' +
-                    '                                <a class="cart" href="/detail/'+plant.id +'" data-toggle="tooltip" title="View Detail">'+ plant.cName +'</a>\n' +
-                    '                            </div>\n' +
-                    '                        </div>\n' +
-                    '                    </div>\n' +
-                    '                </div>');
-
+        function showPage(totalPages) {
+            $('.pagination').append(' <li><a href="#" class="prev" page-num="0">\n' +
+                '                            <i class="fa fa-chevron-left"></i>\n' +
+                '                            Previous\n' +
+                '                        </a></li>')
+            for (let i = 0; i < totalPages; i++) {
+                $(".pagination").append('<li><a href="#" class="page" page-num="' + (i + 1) + '">' + (i + 1) + '</a></li>')
             }
-            function buildGrid(plants) {
-                $('.container').imagesLoaded(function () {
-                    $('.special-list').empty();
-                    for(var i = 0; i< plants.length; i++){
-                        createDiv(plants[i]);
-                    }
-                    showHeartIcon();
-                    addToFavorite();
-                });
+            $(".pagination").append(' <li><a href="#" class="next" page-num="2"> Next\n' +
+                '                            <i class="fa fa-chevron-right"></i>\n' +
+                '                        </a></li>')
+            $(".page[page-num='1']").addClass('active');
+        }
+        /*page animation*/
+        function pageAnimation() {
 
-            }
-
-            buildGrid(plants);
-
-            var totalPages = [[${totalPages}]];
-            //for pageFunction()
-            $('#pages').attr('total-page',totalPages);
-
-            function showPage(totalPages) {
-                $('.pagination').append(' <li><a href="#" class="prev" page-num="0">\n' +
-                    '                            <i class="fa fa-chevron-left"></i>\n' +
-                    '                            Previous\n' +
-                    '                        </a></li>')
-                for (let i = 0; i <totalPages ; i++) {
-                    $(".pagination").append('<li><a href="#" class="page" page-num="'+(i+1)+'">'+(i+1)+'</a></li>')
+            $('.page').on('click', function (e) {
+                e.preventDefault();
+                $('.page.active').removeClass('active');
+                $(this).addClass('active');
+                let pageNum = parseInt($(this).attr('page-num'));
+                pageFunction()
+                $('.prev').attr('page-num', pageNum - 1);
+                $('.next').attr('page-num', pageNum + 1);
+            })
+            $('.prev').on('click', function (e) {
+                e.preventDefault();
+                var pageNum = parseInt($(this).attr('page-num'));
+                if (pageNum === 0) {
+                    return;
                 }
-                $(".pagination").append(' <li><a href="#" class="next" page-num="2"> Next\n' +
-                    '                            <i class="fa fa-chevron-right"></i>\n' +
-                    '                        </a></li>')
-                $(".page[page-num='1']").addClass('active');
+                $('.page.active').removeClass('active');
+                $('.page[page-num=' + pageNum + ']').addClass('active');
+                pageFunction()
+                $('.prev').attr('page-num', pageNum - 1);
+                $('.next').attr('page-num', pageNum + 1);
+
+            })
+            $('.next').on('click', function (e) {
+                e.preventDefault();
+                var pageNum = parseInt($(this).attr('page-num'));
+                var totalPages = parseInt($('#pages').attr('total-page'));
+                if (pageNum === totalPages + 1) {
+                    return;
+                }
+                $('.page.active').removeClass('active');
+                $('.page[page-num=' + pageNum + ']').addClass('active');
+                pageFunction()
+                $('.prev').attr('page-num', pageNum - 1);
+                $('.next').attr('page-num', pageNum + 1);
+            })
+
+        }
+
+        /*get filter data*/
+        function getFilterData() {
+            var filterData = {};
+            var pagNum = parseInt($('.pagination a.active').attr('page-num'));
+            var color = $('.filter-button-group[data-filter-group="color"] button.active').attr('data-filter');
+            var type = $('.filter-button-group[data-filter-group="type"] button.active').attr('data-filter');
+            var month = $('.filter-button-group[data-filter-group="month"] button.active').attr('data-filter');
+            filterData['color'] = color;
+            filterData['type'] = type;
+            filterData['month'] = month;
+            filterData['page'] = pagNum;
+
+            return filterData;
+        }
+
+        /*load  image of clicked page*/
+        function pageFunction() {
+            let filterData = getFilterData();
+            var funcName = function (plantData) {
+                let plants = plantData['plants'];
+                buildGrid(plants);
+                $("html, body").animate({
+                    scrollTop: 300
+                }, 200);
             }
-            showPage(totalPages);
+            dealDataFromAjax("/page/filter", filterData, funcName);
 
-            pageAnimation();
-
-            /*page animation*/
-            function pageAnimation() {
-
-                $('.page').on('click', function (e) {
-                    e.preventDefault();
-                    $('.page.active').removeClass('active');
-                    $(this).addClass('active');
-                    var pagNum = parseInt($(this).attr('page-num'));
-                    pageFunction()
-                    $('.prev').attr('page-num',pagNum-1);
-                    $('.next').attr('page-num', pagNum+1);
-
-                })
-                $('.prev').on('click',function (e) {
-                    e.preventDefault();
-                    var pageNum = parseInt($(this).attr('page-num'));
-                    if(pageNum === 0){
-                        return;
-                    }
-                    $('.page.active').removeClass('active');
-                    $('.page[page-num='+pageNum+']').addClass('active');
-                    pageFunction();
-                    $('.next').attr('page-num',pageNum+1);
-                    $('.prev').attr('page-num',pageNum-1);
-
-                })
-                $('.next').on('click',function (e) {
-                    e.preventDefault();
-                    var pageNum = parseInt($(this).attr('page-num'));
-                    var totalPages = parseInt($('#pages').attr('total-page'));
-                    if(pageNum === totalPages+1){
-                        return;
-                    }
-                    $('.page.active').removeClass('active');
-                    $('.page[page-num='+pageNum+']').addClass('active');
-                    pageFunction()
-                    $('.prev').attr('page-num',pageNum-1);
-                    $('.next').attr('page-num',pageNum+1);
-                })
-            }
-
-            /*get filter data*/
-            function getFilterData() {
-                var filterData = {};
-                var pagNum = parseInt($('.pagination a.active').attr('page-num'));
-                var color = $('.filter-button-group[data-filter-group="color"] button.active').attr('data-filter');
-                var type = $('.filter-button-group[data-filter-group="type"] button.active').attr('data-filter');
-                var month = $('.filter-button-group[data-filter-group="month"] button.active').attr('data-filter');
-                filterData['color'] = color;
-                filterData['type'] = type;
-                filterData['month'] = month;
-                filterData['page'] = pagNum;
-
-                return filterData;
-            }
-
-            function pageFunction() {
-                    let pageNum =parseInt($(this).attr('page-num'));
-                    let totalPages = parseInt($('#pages').attr('total-page'));
-                    if(pageNum === 0 || pageNum === totalPages+1 ){
-                        return;
-                    }
-                    let filterData = getFilterData();
-
-                    var funcName = function(plantData){
-
-                        let plants = plantData['plants'];
-                        buildGrid(plants);
-                        window.location.href="#specialDiv";
-                    }
-
-                    dealDataFromAjax("/page/filter", filterData, funcName);
-
-            }
+        }
 
 
+        filterPage();
 
-            filterPage();
+        function filterPage() {
 
-            function filterPage() {
+            let portfolio = $('.data-intro .special-menu');
+            portfolio.on('click', 'button', function (e) {
+                $('.temp-msg').css('visibility', 'hidden');
+                $('.temp-msg').css('height', '0');
 
-                let portfolio = $('.special-menu');
-                portfolio.on('click','button',function (e) {
-                    $(this).addClass('active').siblings().removeClass('active');
+                $(this).addClass('active').siblings().removeClass('active');
 
-                    let filterData = getFilterData();
-                    filterData['page'] = 1;
+                let filterData = getFilterData();
+                filterData['page'] = 1;
 
-                    let funcName = function(plantData){
-                        let plants = plantData['plants'];
-                        $('.pagination').empty();
-                        let totalPage = plantData['page'];
-                        $('#pages').attr('total-page', totalPage);
-                        if(totalPage > 1){
-                            showPage(totalPage);
-                        }
-
-                        pageAnimation();
-                        buildGrid(plants);
-                    }
-
-                    dealDataFromAjax("/page/filter", filterData, funcName);
-
-                })
-            }
-
-            search();
-            function search() {
-                $('.search-button').on('click',function (e) {
-                    let searchName = $('.search-input').val().trim();
-                    if(searchName.length === 0){
-                        return;
-                    }
-                    e.preventDefault();
-                    $('.special-menu').hide();
-                    $('.show-filter').show();
-                    let data = {'name':searchName};
+                let funcName = function (plantData) {
+                    let plants = plantData['plants'];
                     $('.pagination').empty();
-
-                    var funcName = function (plantData) {
-                        if(plantData.length > 40){
-                            plantData = plantData.slice(0,40);
-                        }
-                        buildGrid(plantData);
-                    };
-                    dealDataFromAjax("/plant/search", data, funcName);
-                })
-
-                $('.show-filter').on('click',function () {
-                    $('.special-menu').show();
-                    $('.show-filter').hide();
-                })
-            }
-
-            function dealDataFromAjax(url, dataParam, funcName) {
-                $.ajax({
-                    type:"POST",
-                    contentType: "application/json",
-                    url: url,
-                    data: JSON.stringify(dataParam),
-                    dataType: 'json',
-                    cache: false,
-                    timeout: 60000,
-                    success: function (data) {
-                        funcName(data);
-                    },
-                    error: function (e) {
-                        console.log("ERROR : ", e);
+                    let totalPage = plantData['page'];
+                    $('#pages').attr('total-page', totalPage);
+                    if (totalPage > 1) {
+                        showPage(totalPage);
                     }
-                });
-            }
 
-
-            guideText();
-            function guideText() {
-                function blink_text() {
-                    $('.blink').fadeOut(500);
-                    $('.blink').fadeIn(500);
+                    if (totalPage === 0) {
+                        buildGridWthNoResult();
+                        return;
+                    }
+                    pageAnimation();
+                    buildGrid(plants);
                 }
-                setInterval(blink_text, 1500);
 
-                $('.blink').on('click',function () {
-                    $("html, body").animate({
-                        scrollTop: 100
-                    }, 600);
-                    setTimeout(function () {
-                        introJs().start();
-                    }, 1000);
+                dealDataFromAjax("/page/filter", filterData, funcName);
 
-                })
+            })
+        }
+
+        function buildGridWthNoResult() {
+            $('.special-list').empty();
+            $('.temp-msg').css('visibility', 'visible');
+            $('.temp-msg').css('height', '');
+        }
+
+        /*search plant name*/
+        search();
+        function search() {
+            $('.search-button').on('click', function (e) {
+                let searchName = $('.search-input').val().trim();
+                if (searchName.length === 0) {
+                    return;
+                }
+                e.preventDefault();
+                $('.filter-menu').hide();
+                $('.show-filter').show();
+                let data = {'name': searchName};
+                $('.pagination').empty();
+
+                var funcName = function (plantData) {
+                    if (plantData.length > 40) {
+                        plantData = plantData.slice(0, 40);
+                    }
+                    if(plantData.length === 0){
+                        buildGridWthNoResult();
+                        return;
+                    }
+                    buildGrid(plantData);
+                };
+                dealDataFromAjax("/plant/search", data, funcName);
+            })
+
+            $('.show-filter').on('click', function () {
+                $('.filter-button-group .active').removeClass('active');
+                $('.filter-button-group button[data-filter=all]').addClass('active');
+                $('.filter-menu').show();
+                $('.show-filter').hide();
+            })
+        }
+        function dealDataFromAjax(url, dataParam, funcName) {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                url: url,
+                data: JSON.stringify(dataParam),
+                dataType: 'json',
+                cache: false,
+                timeout: 60000,
+                success: function (data) {
+                    funcName(data);
+                },
+                error: function (e) {
+                    console.log("ERROR : ", e);
+                }
+            });
+        }
+
+
+        /*show start guide*/
+        guideText();
+        function guideText() {
+            function blink_text() {
+                $('.blink').fadeOut(500);
+                $('.blink').fadeIn(500);
             }
 
-            setGuideInfo();
-            function setGuideInfo() {
-                let info = [];
-                info[0] = "You can find more than 300 bee friendly plants at this page gallery.....";
-                info[1] = "If you want to know a certain plant, You can type name here to check it.... ";
-                info[2] = "If you do not know any specific plants. Dont worry, we offer filters to help you find your favorite plant...";
-                info[3] = "You can filter color here!";
-                info[4] = "You can also select plant by flowering month";
-                let i = 0;
-                $('.data-intro').each(function () {
-                    $(this).attr('data-intro', info[i]);
-                    i += 1;
-                })
+            setInterval(blink_text, 1000);
+
+            $('.blink').on('click', function () {
+                $("html, body").animate({
+                    scrollTop: 100
+                }, 600);
+                setTimeout(function () {
+                    introJs().start();
+                }, 1000);
+
+            })
+        }
+
+        /*set guide message for each step*/
+        setGuideInfo();
+        function setGuideInfo() {
+            let info = [];
+            info[0] = "You can find more than 300 bee-friendly plants at this page gallery. " +
+                "Those are local plants that are recommended by beekeepers and suggested based on their flower colors.";
+            info[1] = "If you know specific plant’s name you can search it and see its details";
+            info[2] = "No matter tree or herb, plants attract bees. But, if you prefer specific type, you the one you want.";
+            info[3] = "Flower color is important feature to attract bees. Blue, Purple and Yellow flowers attract bees more. " +
+                "You can choose colors you want to have though.";
+            info[4] = "Bees will be visiting your garden when your plants are flowering. Bees are active during farmer seasons." +
+                " Considering these and your preference, you can choose plants depending on its flowing months.";
+            let i = 0;
+            $('.data-intro').each(function () {
+                $(this).attr('data-intro', info[i]);
+                i += 1;
+            })
+        }
+
+        /*show heart for favorite plants*/
+        function showHeartIcon() {
+            let list = JSON.parse(sessionStorage.getItem('list'));
+            if (list == null) {
+                return;
             }
-
-
-            function showHeartIcon() {
+            for (var i in list) {
+                var pId = list[i].id;
+                $('#' + pId + ' .type-lb').show();
+            }
+        }
+        /*add plant to favorite list*/
+        function addToFavorite() {
+            $('.list-icon li a').on('click', function (e) {
+                e.preventDefault();
+                let pId = $(this.closest('.special-grid'))[0].id;
                 let list = JSON.parse(sessionStorage.getItem('list'));
-                for(var i in list){
-                    var pId = list[i].id;
-                    $('#'+pId+' .type-lb').show();
-                }
-            }
-
-            function addToFavorite() {
-                $('.mask-icon li a').on('click',function (e) {
-                    e.preventDefault();
-                    var pId = $(this.closest('.special-grid'))[0].id;
-                    var list = sessionStorage.getItem('list');
-                    list = JSON.parse(list);
-                    if(list[0] == null){
-                        list = [];
-                    }else{
-                        for (let i = 0; i < list.length; i++) {
-                            if(list[i]['id'] === pId){
-                                return;
-                            }
+                if (list == null) {
+                    list = [];
+                } else {
+                    for (let i = 0; i < list.length; i++) {
+                        if (list[i]['id'] === pId) {
+                            return;
                         }
                     }
-                    var d = $(this.closest('.box-img-hover'))[0];
-                    var t = d.children[0];
-                    t.style.display = 'block';
+                }
+                let data = {'id': pId};
+                let d = $(this.closest('.box-img-hover'))[0];
+                let t = d.children[0];
 
-                    setData(pId, list);
-
-                })
-            }
-
-            function setData(id, list) {
-                let data = {'id': id};
                 $.ajax({
                     type: "POST",
                     contentType: "application/json",
@@ -594,22 +706,24 @@
                     cache: false,
                     timeout: 60000,
                     success: function (data) {
-                        var info = data['guide'];
+                        let info = data['guide'];
                         info['name'] = data['name'];
                         info['link'] = data['link'];
                         list.push(info);
-
                         sessionStorage.setItem('list', JSON.stringify(list));
+                        t.style.display = 'block';
                     },
                     error: function (e) {
                         console.log("ERROR : ", e);
                     }
                 });
-            }
 
-        });
+            })
+        }
 
-    </script>
+    });
+
+</script>
 </body>
 
 </html>

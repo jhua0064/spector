@@ -8,6 +8,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * get plant occurrence data from database
+ */
 @Service
 @Transactional
 public class OccuService {

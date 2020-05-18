@@ -11,6 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * get plant related data from database
+ */
 @Service
 @Transactional
 public class PlantService {
@@ -19,6 +22,14 @@ public class PlantService {
 
     public Plant getPlant(Integer id){
         return plantRepo.getOne(id);
+    }
+
+    public List<Plant> getTopSelectedPlants(){
+        return plantRepo.findTopSelected();
+    }
+
+    public Integer updateTopPlant(Integer id){
+        return plantRepo.updateTop(id);
     }
 
     public Page<Plant> listPlantsByPage(Integer page){

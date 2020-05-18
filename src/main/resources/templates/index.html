@@ -109,7 +109,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Start your Journey<br> to help Bees!</strong></h1>
+                        <h1 class="m-b-20"><strong>Start your Journey<br> from Growing Bee friendly Plants!</strong></h1>
                         <p class="m-b-40">See how can you design your garden by planting bee friendly flowers <br> to
                             attract and help bees.</p>
                         <p><a class="btn hvr-hover" href="/plants">Choose Plants</a></p>
@@ -217,13 +217,13 @@
             <div class="col-lg-12">
                 <div class="title-all text-center">
                     <h1>Our Suggestions</h1>
-                    <p>Start from our suggestions and explore more by yourselves</p>
+                    <p><b>Start from our suggestions and explore more by yourselves</b></p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="special-menu text-center">
+                <div class="special-menu text-center recommendation">
                     <div class="button-group filter-button-group">
                         <button data-filter=".top-featured">User's Top Selection</button>
                         <button data-filter=".best-seller">Our Best Recommendation</button>
@@ -232,7 +232,7 @@
             </div>
         </div>
 
-        <div class="row special-list">
+        <div class="row special-rec-list">
             <div class="col-lg-3 col-md-6 special-grid best-seller">
                 <div class="products-single fix">
                     <div class="box-img-hover">
@@ -253,16 +253,16 @@
             <div class="col-lg-3 col-md-6 special-grid top-featured">
                 <div class="products-single fix">
                     <div class="box-img-hover">
-                        <img src="/images/gallery-img-3326.jpg" class="img-fluid" alt="Image">
+                        <img th:src="${topPlants.get(0).getImgLink()}" class="img-fluid" alt="Image">
                         <div class="mask-icon">
                             <ul>
-                                <li><a href="/detail/3326" data-toggle="tooltip" data-placement="right" title="View"><i
+                                <li><a th:href="'/detail/'+${topPlants.get(0).getId()}" data-toggle="tooltip" data-placement="right" title="View"><i
                                         class="fas fa-eye"></i></a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="why-text">
-                        <h4>Purple Foxtail Grass</h4>
+                        <h4 th:text="${topPlants.get(0).getcName()}"></h4>
                     </div>
                 </div>
             </div>
@@ -270,16 +270,16 @@
             <div class="col-lg-3 col-md-6 special-grid top-featured">
                 <div class="products-single fix">
                     <div class="box-img-hover">
-                        <img src="/images/gallery-img-2914.jpg" class="img-fluid" alt="Image">
+                        <img th:src="${topPlants.get(1).getImgLink()}" class="img-fluid" alt="Image">
                         <div class="mask-icon">
                             <ul>
-                                <li><a href="/detail/2914" data-toggle="tooltip" data-placement="right" title="View"><i
+                                <li><a th:href="'/detail/'+${topPlants.get(1).getId()}" data-toggle="tooltip" data-placement="right" title="View"><i
                                         class="fas fa-eye"></i></a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="why-text">
-                        <h4>Mazus</h4>
+                        <h4 th:text="${topPlants.get(1).getcName()}"></h4>
                     </div>
                 </div>
             </div>
@@ -422,12 +422,7 @@
 <script src="/js/isotope.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
 <script src="/js/baguetteBox.min.js"></script>
-<script src="/js/form-validator.min.js"></script>
 <script src="/js/custom.js"></script>
-<script>
-    sessionStorage.setItem('list','[]');
-
-</script>
 </body>
 
 </html>

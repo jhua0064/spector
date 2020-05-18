@@ -68,7 +68,7 @@
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item active"><a class="nav-link" href="/plants">Plants</a></li>
-                    <li class="nav-item" ><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
                     <li class="nav-item"><a href="/plantList" class="nav-link ">Favorite Plants</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
                 </ul>
@@ -116,7 +116,8 @@
             <div class="col-md-6 special-grid">
                 <div class="products-single fix ">
                     <div class="box-img-hover">
-                        <div class="type-lb" style="display: none"> <p class="sale"><i class="far fa-heart"></i>     </p> </div>
+                        <div class="type-lb" style="display: none"><p class="sale"><i class="far fa-heart"></i></p>
+                        </div>
                         <img th:src="${plant.getImgLink()}" class="img-detail" alt="Image">
                         <ul class="add-to-list"><a href="#" class="btn hvr-hover">Add to Favorite</a></ul>
                     </div>
@@ -144,12 +145,12 @@
 <div class="products-box" style="padding: 0">
     <div class="container">
         <div class="row ">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="products-single fix">
-                    <p>
-                        <label class="guide-title">Water Level:</label> <span th:text="${guide.getWaterNeed()}"/>
-
-                        <br>
+                    <div class="guide-water">
+                        <label class="guide-title">Water Need:</label>
+                        <span></span>
+                    </div>
                     <div class="guide-light">
                         <label class="guide-title">Light Level:</label> I can grow under
                         <span th:text="${guide.getLightNeed()}"></span>
@@ -159,7 +160,7 @@
                         <span th:text="${guide.getSoilType()}"></span>
                     </div>
                     <div class="guide-soil-add">
-                        <label class="guide-title">Soil Addition:</label> <span th:text="${guide.getSoilAdd()}"></span>
+                        <label class="guide-title">Soil Condition:</label> <span th:text="${guide.getSoilAdd()}"></span>
                     </div>
                     <div class="guide-height">
                         <label class="guide-title">Height Range:</label> <span th:text="${guide.gethRange()}"></span>
@@ -170,17 +171,15 @@
                     <label class="guide-title">Climate:</label> <span th:text="${guide.getClimate()}"></span> <br>
                     <label class="guide-title">Maintenance:</label> <span
                         th:text="${guide.getMaintenance()}"></span> <br>
-
-                    </p>
                 </div>
             </div>
             <div>
-                <div class="weather" style="width: 110%;">
+                <div class="weather" >
                     <div class="current" style="height:320px">
                         <div class="info">
                             <div>&nbsp;</div>
-                            <div class="city"><small><small>CITY:</small></small> <span >London</span></div>
-                            <div class="temp"><span >67&deg;</span> <small>C</small></div>
+                            <div class="city"><small><small>CITY:</small></small> <span>London</span></div>
+                            <div class="temp"><span>67&deg;</span> <small>C</small></div>
                             <div class="wind">
                                 <small><small>WIND:</small></small> <span class="wind-val">22 </span> km/h <br>
                                 <small><small>HUMID:</small></small> <span class="humid">22 </span> <br>
@@ -189,21 +188,21 @@
                         </div>
                         <div class="icon">
                             <p></p>
-                            <span ></span>
+                            <span></span>
                         </div>
                     </div>
-                    <div class="future" >
+                    <div class="future">
                         <div class="day">
                             <h3>Mon</h3>
-                            <p><span ></span></p>
+                            <p><span></span></p>
                         </div>
                         <div class="day">
                             <h3>Tue</h3>
-                            <p><span ></span></p>
+                            <p><span></span></p>
                         </div>
                         <div class="day">
                             <h3>Wed</h3>
-                            <p><span ></span></p>
+                            <p><span></span></p>
                         </div>
                     </div>
                 </div>
@@ -225,6 +224,7 @@
             <div class="col-lg-12">
                 <div class="title-all text-center">
                     <h1>Check if someone saw wild <span th:text="${plant.getcName()}"/> in Victoria</h1>
+                    <p class="geo-location">Location You are looking : <span ></span></p>
                 </div>
             </div>
         </div>
@@ -354,14 +354,13 @@
 <script src="/js/inewsticker.js"></script>
 <script src="/js/bootsnav.js"></script>
 <script src="/js/images-loded.min.js"></script>
+<script src="/js/isotope.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
 <script src="/js/baguetteBox.min.js"></script>
-<script src="/js/form-validator.min.js"></script>
-<script src="/js/contact-form-script.js"></script>
 <script src="/js/custom.js"></script>
 <script>
     $(function () {
-        //Profile
+        //show Profile
         var season = "[[${plant.getSeason()}]]";
         if (season == "n") {
             $(".season").hide();
@@ -390,7 +389,6 @@
             $(".season-span").html(seasonStr);
         }
 
-
         var smell = [[${guide.getSmell()}]];
         if (smell === 1) {
             $(".smell-span").html("It produces good smell!");
@@ -399,29 +397,49 @@
             $(".smell-span").hide()
         }
 
-        //guide present
-        const lightImg = {"Sun":"/images/sun-img.png", "Semi-shade":"/images/semi-shade-img.png", "Shade":"/images/shade-img.png"};
+        //guide information present
+        let water = "[[${guide.getWaterNeed()}]]".replace("mm","");
+        water = water.split("to");
+        let min = (parseInt(water[0])/48).toFixed(1);
+        let max = (parseInt(water[1])/48).toFixed(1);
+        $('.guide-water span').html(min+" L /m<sup>2</sup> - " +max+" L /m<sup>2</sup> per week");
+
+        const lightImg = {
+            "Sun": "/images/sun-img.png",
+            "Semi-shade": "/images/semi-shade-img.png",
+            "Shade": "/images/shade-img.png"
+        };
         const lightMap = new Map(Object.entries(lightImg));
         var light = "[[${guide.getLightNeed()}]]";
         var lightList = light.split(",");
-        for(var  i in lightList){
-            $(".guide-light").append(' <img src='+ lightMap.get(lightList[i]) +' width="50" height="50"> ');
+        for (var i in lightList) {
+            $(".guide-light").append(' <img src=' + lightMap.get(lightList[i]) + ' width="50" height="50"> ');
         }
 
-        const soilImg = {"Loam":"/images/loam-img.png", "Sand":"/images/sand-img.png", "Clay":"/images/clay-img.png"};
+        const soilImg = {
+            "Loam": "/images/loam-img.png",
+            "Sand": "/images/sand-img.png",
+            "Clay": "/images/clay-img.png"
+        };
         const soilMap = new Map(Object.entries(soilImg));
         var soil = "[[${guide.getSoilType()}]]";
         var soilList = soil.split(",");
-        for(var  i in soilList){
-            $(".guide-soil").append(' <img src='+ soilMap.get(soilList[i]) +' width="50" height="50"> ');
+        for (var i in soilList) {
+            $(".guide-soil").append(' <img src=' + soilMap.get(soilList[i]) + ' width="50" height="50"> ');
         }
 
         var soilAdd = "[[${guide.getSoilAdd()}]]";
         var height = "[[${guide.gethRange()}]]";
         var spread = "[[${guide.getsRange()}]]";
-        if(soilAdd === "n"){$(".guide-soil-add").hide()}
-        if(height === "n"){$(".guide-height").hide()}
-        if(spread === "n"){$(".guide-spread").hide()}
+        if (soilAdd === "n") {
+            $(".guide-soil-add").hide()
+        }
+        if (height === "n") {
+            $(".guide-height").hide()
+        }
+        if (spread === "n") {
+            $(".guide-spread").hide()
+        }
 
         //show map start
         let msg = "[[${records}]]";
@@ -434,6 +452,7 @@
             var data = [];
             var name = "[[${plant.getcName()}]]";
             if (records.length <= 0) {
+                $('.geo-location').hide();
                 var feature = {
                     "type": "Feature",
                     "properties": {
@@ -510,9 +529,10 @@
                     // Change the cursor style as a UI indicator.
                     map.getCanvas().style.cursor = 'pointer';
 
-                    var coordinates = e.features[0].geometry.coordinates.slice();
-                    var description = e.features[0].properties.description;
-
+                    let coordinates = e.features[0].geometry.coordinates.slice();
+                    let description = e.features[0].properties.description;
+                    let locationStr = coordinates[0].toFixed(4) + ", " + coordinates[1].toFixed(4)
+                    $('.geo-location span').text(locationStr);
                     // Ensure that if the map is zoomed out such that multiple
                     // copies of the feature are visible, the popup appears
                     // over the copy being pointed to.
@@ -536,40 +556,57 @@
 
         }
 
+        //add to favorite list
         let pId = [[${plant.getId()}]];
         showHeart(pId)
+
         function showHeart(pId) {
             let list = JSON.parse(sessionStorage.getItem('list'));
-            var  aTag = $('.add-to-list a');
-            var heart = $('.type-lb');
-            for(var i in list){
-                if(pId === list[i].id){
-                    heart.show();
-                    aTag.hide();
-                    return
+            let aTag = $('.add-to-list a');
+            let heart = $('.type-lb');
+            if (list != null) {
+                for (var i in list) {
+                    if (pId === list[i].id) {
+                        heart.show();
+                        aTag.hide();
+                        return
+                    }
                 }
+            } else {
+                list = [];
             }
+
             heart.hide();
             aTag.show();
 
-            aTag.on('click',function (e) {
+            aTag.on('click', function (e) {
                 e.preventDefault();
-                heart.show();
+
                 let data = {'id': pId};
+                let info = {};
+                info['id'] = pId;
+                info['waterNeed'] = "[[${guide.getWaterNeed()}]]";
+                info['lightNeed'] = light;
+                info['soilType'] = soil;
+                info['soilAdd'] = soilAdd;
+                info['hRange'] = height;
+                info['sRange'] = spread;
+                info['climate'] = "[[${guide.getClimate()}]]";
+                info['maintenance'] = "[[${guide.getMaintenance()}]]";
+                info['name'] = "[[${plant.getcName()}]]";
+                info['link'] = "[[${plant.getImgLink()}]]";
+                list.push(info);
+                sessionStorage.setItem('list', JSON.stringify(list));
                 $.ajax({
                     type: "POST",
                     contentType: "application/json",
-                    url: "/plantList/plants",
+                    url: "/plantList/detail",
                     data: JSON.stringify(data),
                     dataType: 'json',
                     cache: false,
                     timeout: 60000,
                     success: function (data) {
-                        var info = data['guide'];
-                        info['name'] = data['name'];
-                        info['link'] = data['link'];
-                        list.push(info);
-                        sessionStorage.setItem('list', JSON.stringify(list));
+                        heart.show();
                     }
                 });
                 aTag.hide();

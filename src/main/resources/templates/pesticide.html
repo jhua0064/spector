@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="/css/responsive.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/custom.css">
+    <!--weather    -->
+    <link rel="stylesheet" href="/css/weather-icons.min.css">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -77,7 +79,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Pesticide - Avoid using any pesticide as possible as you can</h2>
+                <h2>Pesticide - Use pesticide carefully! If possible, avoid pesticide as much as you can</h2>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active"> Pesticide</li>
@@ -92,7 +94,7 @@
 <div class="products-box">
     <div class="container">
 
-        <div align="center">
+        <div  class="products-single fix"  align="center">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Xr-VFczNm9Y" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
@@ -110,23 +112,29 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-all text-center">
+
                     <h1>Check How harmful Your Pesticide is to Bee </h1>
+
+                </div>
+                <div class="products-single fix"  align="center">
+                    <img src="/images/pest.png">
                 </div>
             </div>
         </div>
         <div class="search-product">
             <form action="#">
-                <input class="form-control" placeholder="Type pesticide name here..." type="text" required="required">
+                <input class="form-control" placeholder="Type pesticide label or brand name here..." type="text"
+                       required="required">
                 <button type="submit" id="form-submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
-        <div class="pest-msg" >
-            <p style="width: 100%" >
+        <div class="pest-msg">
+            <p style="width: 100%">
             <h4 class="with-result">
                 Information of searched pesticide will show below
             </h4>
             </p>
-            <h4  class="no-result" style="display: none">
+            <h4 class="no-result" style="display: none">
                 No result found in our bee harmful pesticide list.
                 However, it still can be dangerous!
             </h4>
@@ -134,11 +142,64 @@
         <div class="row pest-result">
 
 
-
         </div>
     </div>
 </div>
 <!-- End search pesticide -->
+
+<!-- Start pesticide weather guide  -->
+<div class="products-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-all text-center">
+                    <h1>Check Weather Condition If you Still Choose to Spray Pesticide</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="weather">
+                    <div class="current">
+                        <div class="info">
+                            <div>&nbsp;</div>
+                            <div class="city"><small><small>CITY:</small></small> <span>London</span></div>
+                            <div class="temp"><span>67&deg;</span> <small>C</small></div>
+                            <div class="wind">
+                                <small><small>WIND:</small></small> <span class="wind-val">22 </span> km/h <br>
+                                <small><small>HUMID:</small></small> <span class="humid">22 </span> <br>
+                                <small><small>PRESSURE:</small></small> <span class="pressure">22 </span>
+                            </div>
+                        </div>
+                        <div class="icon">
+                            <p></p>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <p>
+                    <b>Always read and follow the product label directions, including any restrictions. Many labels now
+                    detail weather conditions, droplet size, and equipment and spray drift restraints and/or mandatory
+                        no-spray zones to help users manage drift.</b>
+                </p>
+                <br>
+                <p class="pest-weather">
+                    <b>Before you start, check that the weather conditions are suitable for spraying (ie wind speeds
+                    between 3–15 km/h, blowing away from sensitive crops/areas, Delta T between two and eight,
+                    temperature below 28&deg;C, no inversion layer present). If the weather is unstable or unpredictable,
+                    don’t spray. Continue to monitor weather conditions while spraying and stop spraying if it turns
+                        unfavourable. <a href="http://liveandletbee.org/effects-of-pesticides/" target="_blank">Learn More</a></b>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- End pesticide weather guide -->
 
 <!-- Start Instagram Feed  -->
 <div class="instagram-box">
@@ -251,23 +312,22 @@
 <script src="/js/jquery.superslides.min.js"></script>
 <script src="/js/bootstrap-select.js"></script>
 <script src="/js/inewsticker.js"></script>
-<script src="/js/bootsnav.js."></script>
+<script src="/js/bootsnav.js"></script>
 <script src="/js/images-loded.min.js"></script>
 <script src="/js/isotope.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
 <script src="/js/baguetteBox.min.js"></script>
 <script src="/js/form-validator.min.js"></script>
-<script src="/js/contact-form-script.js"></script>
 <script src="/js/custom.js"></script>
 </body>
 <script>
 
+    // show msg when no result matched
     checkPest();
-
     function checkPest() {
         $('#form-submit').on('click', function (e) {
             let param = $('.form-control').val().trim();
-            if(param.length === 0){
+            if (param.length === 0) {
                 return;
             }
             e.preventDefault();
@@ -284,14 +344,14 @@
                 timeout: 60000,
                 success: function (data) {
                     $('.pest-result').empty();
-                    if(data.length <= 0){
+                    if (data.length <= 0) {
                         $('.no-result').show();
                         $('.with-result').hide();
-                    }else{
+                    } else {
                         $('.no-result').hide();
                         $('.with-result').show();
                     }
-                    for(let i in data){
+                    for (let i in data) {
 
                         showPest(data[i]);
                     }
@@ -303,10 +363,9 @@
         })
     }
 
-
     function showPest(pest) {
         $('.pest-result').append('<div class="col-md-6 special-grid">\n' +
-            '                <h4>'+ pest.name + '</h4>\n' +
+            '                <h4>' + pest.name + '</h4>\n' +
             '                <p>\n' +
             '                    <label>Constituent:</label> <span>' + pest.constituent + '</span>\n' +
             '                    <label>Concentration:</label> <span>' + pest.concentration + '</span><br>\n' +
@@ -314,7 +373,7 @@
             '                </p>\n' +
             '                <p>\n' +
             '                    <label>Guidance:</label><br>\n' +
-                                 pest.guidance   +
+            pest.guidance +
             '                </p>\n' +
             '            </div>')
     }

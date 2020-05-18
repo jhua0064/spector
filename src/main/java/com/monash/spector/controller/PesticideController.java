@@ -29,6 +29,12 @@ public class PesticideController {
         return "pesticide";
     }
 
+
+    /**
+     * user search pesticide data by search label name
+     * @param data
+     * @return matched pesticide data
+     */
     @PostMapping("/pesticide/result")
     public ResponseEntity<?> getSearchedPest(@RequestBody String data ){
         JsonObject jobj = (JsonObject)new JsonParser().parse(data);

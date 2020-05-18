@@ -61,50 +61,50 @@
 	   Special Menu
 	   ................................................. */
 
-	var Container = $('.container');
-	//store all filters
-	var filters = {};
 
-	function contactVaue(objArr){
-		var value = '';
-		for(var prop in objArr){
-			value += objArr[prop];
-		}
-		return value;
-	};
+		var Container = $('.container');
+		//store all filters
+		var filters = {};
 
-	Container.imagesLoaded(function() {
-		if($('.navbar-nav .active a').text() === "Plants"){
-			return;
-		}
-		var portfolio = $('.special-menu');
-		portfolio.on('click', 'button', function(e) {
-			$(this).addClass('active').siblings().removeClass('active');
-			var btn = $(e.currentTarget);
-			//get group key
-			var btnGroup = btn.parents('.button-group');
-			var filterGroup = btnGroup.attr('data-filter-group');
-			//add filter
-			filters[filterGroup] = btn.attr('data-filter');
+		function contactVaue(objArr){
+			var value = '';
+			for(var prop in objArr){
+				value += objArr[prop];
+			}
+			return value;
+		};
 
-			var filterValue = contactVaue(filters);
-			$grid.isotope({
-				filter: filterValue
+		Container.imagesLoaded(function() {
+			var portfolio = $('.recommendation');
+			portfolio.on('click', 'button', function(e) {
+				$(this).addClass('active').siblings().removeClass('active');
+				var btn = $(e.currentTarget);
+				//get group key
+				var btnGroup = btn.parents('.button-group');
+				var filterGroup = btnGroup.attr('data-filter-group');
+				//add filter
+				filters[filterGroup] = btn.attr('data-filter');
+
+				var filterValue = contactVaue(filters);
+				$grid.isotope({
+					filter: filterValue
+				});
+			});
+			var $grid = $('.special-rec-list').isotope({
+				itemSelector: '.special-grid'
 			});
 		});
-		var $grid = $('.special-list').isotope({
-			itemSelector: '.special-grid'
-		});
-	});
+
+
 
 	/* ..............................................
 	   BaguetteBox
 	   ................................................. */
 
-	baguetteBox.run('.tz-gallery', {
+	/*baguetteBox.run('.tz-gallery', {
 		animation: 'fadeIn',
 		noScrollbars: true
-	});
+	});*/
 
 	/* ..............................................
 	   Offer Box
@@ -243,12 +243,12 @@
 		}
 		function showWeather() {
 			let localGeo = {"longitude": 144.9633, "latitude": -37.8184};
-			if(navigator.geolocation){
+			/*if(navigator.geolocation){
 				navigator.geolocation.getCurrentPosition((position) => {
 					localGeo.longitude = position.coords.longitude;
 					localGeo.latitude = position.coords.latitude;
 				});
-			}
+			}*/
 
 			const icons = {
 				'clear-day': "wi-day-sunny",

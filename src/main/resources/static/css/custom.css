@@ -42,7 +42,7 @@
     height: 340px;
 }
 
-.about-more a, .title-all p a, .title-all h1 a{
+.about-more a, .title-all p a, .title-all h1 a, .pest-weather a{
     color: #ffc107;
 }
 
@@ -60,8 +60,9 @@
 {
     display: flex;
     flex-flow: row wrap;
-    background-image: url("/images/weather-bg.jpg");
-    background-repeat: repeat-x;
+    background-image: url("/images/instagram-img-02.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     color: white;
     padding: 10px;
     text-shadow: 1px 1px #F68D2E;
@@ -114,7 +115,7 @@
 {
     flex-grow: 1;
     text-align: center;
-    cursor: pointer;
+    cursor: default;
 }
 
 .weather .future .day:hover
@@ -278,3 +279,6 @@
 .add-to-list a{
     color: #FFFFFF;
 }
+
+
+

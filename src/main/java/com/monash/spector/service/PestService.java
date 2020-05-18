@@ -10,7 +10,7 @@ import java.util.List;
 
 
 /**
- * deal with customer data result from Jpa
+ * deal with customer pesticide related data result from Jpa
  */
 @Service
 @Transactional

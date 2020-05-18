@@ -90,112 +90,111 @@
 
 <!-- Start plant list  -->
 <div class="products-box plant-list">
-    <div class="container temp-msg" style="display: none">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-all text-center">
-                    <h1>You have not chosen any plants yet !</h1>
-                    <h1>Start from our suggestions and explore more by yourselves</h1>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="special-menu text-center">
-                    <div class="button-group filter-button-group">
-                        <button data-filter=".top-featured">User's Top Selection</button>
-                        <button data-filter=".best-seller">Our Best Recommendation</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row special-list">
-            <div class="col-lg-3 col-md-6 special-grid best-seller">
-                <div class="products-single fix">
-                    <div class="box-img-hover">
-                        <img src="/images/gallery-img-2299.jpg" class="img-fluid" alt="Image">
-                        <div class="mask-icon">
-                            <ul>
-                                <li><a href="/detail/2299" data-toggle="tooltip" data-placement="right" title="View Detail"><i
-                                        class="fas fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="why-text">
-                        <h4>Sarsaparilla Vine</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 special-grid top-featured">
-                <div class="products-single fix">
-                    <div class="box-img-hover">
-                        <img src="/images/gallery-img-3326.jpg" class="img-fluid" alt="Image">
-                        <div class="mask-icon">
-                            <ul>
-                                <li><a href="/detail/3326" data-toggle="tooltip" data-placement="right" title="View Detail"><i
-                                        class="fas fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="why-text">
-                        <h4>Purple Foxtail Grass</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 special-grid top-featured">
-                <div class="products-single fix">
-                    <div class="box-img-hover">
-                        <img src="/images/gallery-img-2914.jpg" class="img-fluid" alt="Image">
-                        <div class="mask-icon">
-                            <ul>
-                                <li><a href="/detail/2914" data-toggle="tooltip" data-placement="right" title="View Detail"><i
-                                        class="fas fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="why-text">
-                        <h4>Mazus</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 special-grid best-seller">
-                <div class="products-single fix">
-                    <div class="box-img-hover">
-                        <img src="/images/gallery-img-3673.jpg" class="img-fluid" alt="Image">
-                        <div class="mask-icon">
-                            <ul>
-                                <li><a href="/detail/3673" data-toggle="tooltip" data-placement="right" title="View Detail"><i
-                                        class="fas fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="why-text">
-                        <h4>Blue Stars</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-all text-center">
-                    <h1>You can even find more plants on our <a href="/plants">PLANT GALLERY !</a></h1>
-                </div>
-            </div>
-        </div>
-
-    </div>
     <div class="container" >
+        <div class="temp-msg" style="display: none">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>You have not chosen any plants yet !</h1>
+                        <h1>Start from our suggestions and explore more by yourselves</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="special-menu text-center recommendation">
+                        <div class="button-group filter-button-group">
+                            <button data-filter=".top-featured">User's Top Selection</button>
+                            <button data-filter=".best-seller">Our Best Recommendation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row special-rec-list ">
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <img src="/images/gallery-img-2299.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="/detail/2299" data-toggle="tooltip" data-placement="right" title="View Detail"><i
+                                            class="fas fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>Sarsaparilla Vine</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <img th:src="${topPlants.get(0).getImgLink()}" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a th:href="'/detail/'+${topPlants.get(0).getId()}" data-toggle="tooltip" data-placement="right" title="View"><i
+                                            class="fas fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4 th:text="${topPlants.get(0).getcName()}"></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 special-grid top-featured">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <img th:src="${topPlants.get(1).getImgLink()}" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a th:href="'/detail/'+${topPlants.get(1).getId()}" data-toggle="tooltip" data-placement="right" title="View"><i
+                                            class="fas fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4 th:text="${topPlants.get(1).getcName()}"></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 special-grid best-seller">
+                    <div class="products-single fix">
+                        <div class="box-img-hover">
+                            <img src="/images/gallery-img-3673.jpg" class="img-fluid" alt="Image">
+                            <div class="mask-icon">
+                                <ul>
+                                    <li><a href="/detail/3673" data-toggle="tooltip" data-placement="right" title="View Detail"><i
+                                            class="fas fa-eye"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="why-text">
+                            <h4>Blue Stars</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-all text-center">
+                        <h1>You can even find more plants on our <a href="/plants">PLANT GALLERY !</a></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-all text-center" style="position: relative">
                     <h1 class="guide-msg">Here are all bee friendly plants you like</h1>
-                    <div  style="float: right; background-color: #ffc107">
-                        <a href="#" style="padding: 5px" id="cmd" data-toggle="tooltip" title="download as pdf">
+                    <div  style="float: right; background-color: #ffc107;margin-bottom: 5%" id="download-list">
+                        <a href="#" style="padding: 5px; font-size: 28px; " id="cmd" data-toggle="tooltip" title="download as pdf">
                             <i class="fa fa-download"></i>
                         </a>
                     </div>
@@ -323,40 +322,48 @@
 <script src="/js/jquery.superslides.min.js"></script>
 <script src="/js/bootstrap-select.js"></script>
 <script src="/js/inewsticker.js"></script>
-<script src="/js/bootsnav.js."></script>
+<script src="/js/bootsnav.js"></script>
 <script src="/js/images-loded.min.js"></script>
 <script src="/js/isotope.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
-<script src="/js/baguetteBox.min.js"></script>
 <script src="/js/form-validator.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+<script src="http://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 <script src="/js/custom.js"></script>
 
 <script>
 
-    let list = JSON.parse(sessionStorage.getItem('list'));
-    if(list[0] == null){
-        $('.temp-msg').show();
-        $('.guide-msg').hide();
-        $('#cmd').hide();
-    }else{
-        $('.temp-msg').hide();
-        $('.guide-msg').show();
-        showPlant(list);
-        $('#cmd').show();
+    checkList();
+
+    //check if list is empty
+    function checkList(){
+        let list = JSON.parse(sessionStorage.getItem('list'));
+            if(list == null || list.length === 0){
+            $('.temp-msg').show();
+            $('.guide-msg').hide();
+            $('#cmd').hide();
+        }else{
+            $('.temp-msg').hide();
+            $('.guide-msg').show();
+            showPlant(list);
+            $('#cmd').show();
+        }
     }
 
-
-
+    // show all plants in favorite list
     function showPlant(list) {
         for(var i in list){
             var guide = list[i];
             addGrid(guide);
         }
-
     }
-
     function addGrid(guide) {
+        let water = guide.waterNeed
+        water = water.replace("mm","");
+        water = water.split("to");
+        let min = (parseInt(water[0])/48).toFixed(1);
+        let max = (parseInt(water[1])/48).toFixed(1);
+        guide.waterNeed = min+" L /m<sup>2</sup> - " +max+" L /m<sup>2</sup> per week"
         $('.favorite-list').append('    <div class="col-md-6 special-grid" >\n' +
             '                    <div class="products-single fix ">\n' +
             '<div class="type-lb" > <p class="sale"><a href="#" class="delete" value='+guide.id+'><i class="far fa-trash-alt"></i></a></p> </div>\n'+
@@ -366,7 +373,7 @@
             '                        <div class="why-text" >\n' +
             '                            <h4>' + guide.name + '</h4>\n' +
             '                            <p>\n' +
-            '                                <label class="list-title">Water Level:</label> <span>' + guide.waterNeed + '</span>\n' +
+            '                                <label class="list-title">Water Level:</label> <span>' + guide.waterNeed + '</span><br>\n' +
             '                                <label class="list-title">Light Level:</label> <span>' + guide.lightNeed + ' </span> <br>\n' +
             '                                <label class="list-title">Soil Type:</label> <span>' + guide.soilType + ' </span>\n' +
             '                                <label class="list-title">Soil Condition:</label> <span>' + guide.soilAdd + '</span>\n' +
@@ -382,8 +389,8 @@
             '                </div>')
     }
 
+    // delete plant from list
     deletePlant();
-
     function deletePlant() {
         $('.delete').on('click',function (e) {
             e.preventDefault();
@@ -395,31 +402,48 @@
                 if(id == list[i]['id']){
                     list.splice(i,1);
                     sessionStorage.setItem('list',JSON.stringify(list));
+                    if(list.length === 0){
+                        location.reload();
+                    }
+                    return;
                 }
             }
 
         })
     }
 
-
+    //download as pdf
     downloadPdf();
     function downloadPdf() {
-
         var specialElementHandlers = {
             '#editor': function (element, renderer) {
                 return true;
             }
         };
 
-        $('#cmd').click(function () {
-            var doc = new jsPDF();
-            doc.fromHTML($('#content').html(), 15, 15, {
-                'width': 170,
-                'elementHandlers': specialElementHandlers
+        $('#cmd').click(function (e) {
+            e.preventDefault();
+            var doc = new jsPDF("p", "mm", "a4");
+            html2canvas(document.querySelector('#content')).then(function(canvas){
+                var imgData = canvas.toDataURL('image/png');
+                var pageHeight = 295;
+                var imgWidth = (canvas.width * 30) / 210 ;
+                var imgHeight = canvas.height * imgWidth / canvas.width;
+                var heightLeft = imgHeight;
+                var position = 15;
+
+                doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+
+                while (heightLeft >= 0) {
+                    position = heightLeft - imgHeight;
+                    doc.addPage();
+                    doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= pageHeight;
+                }
+                doc.save('plant-list.pdf');
             });
 
-            doc.save('plant-list.pdf');
-            doc.output('dataurlnewwindow');
         });
 
     }
