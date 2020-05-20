@@ -42,8 +42,12 @@
     height: 340px;
 }
 
-.about-more a, .title-all p a, .title-all h1 a, .pest-weather a{
-    color: #ffc107;
+.about-more{
+    padding-bottom: 20px;
+}
+
+.about-more a, .title-all p a, .title-all h1 a, .pest-weather a,.pest-eg{
+    color: #f4b860;
 }
 
 
@@ -137,6 +141,11 @@
 
 .weather .future .day .temp{
     font-size: 18px;
+}
+
+.pest-weather span{
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 .search-input{
@@ -265,7 +274,7 @@
 }
 
 .bee-affect{
-    color: #fac307;
+    color: #de7b57;
     font-weight: bold;
 }
 
@@ -280,5 +289,8 @@
     color: #FFFFFF;
 }
 
-
+/*about us detail page*/
+#disclaimer{
+    height: 100px;
+}
 

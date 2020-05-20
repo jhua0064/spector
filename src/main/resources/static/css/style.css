@@ -33,7 +33,7 @@
 -------------------------------------------------------------------*/
  body {
      color: #666666;
-     font-size: 15px;
+     font-size: 17px;
      font-family: 'Dosis', sans-serif;
      line-height: 1.80857;
 }
@@ -889,7 +889,8 @@
 }
  .title-all p{
      color: #999999;
-     font-size: 16px;
+     font-size: 20px;
+     font-weight: bold;
 }
  .products-box{
      padding: 40px 0px;
@@ -1270,7 +1271,7 @@
 }
 /*------------------------------------------------------------------ Footer Main -------------------------------------------------------------------*/
  .footer-main{
-     padding: 30px 0px;
+     padding: 10px 0px;
      background: #010101;
 }
 .footer-main hr{
@@ -1553,6 +1554,10 @@
  .about-box-main{
      padding: 70px 0px;
 }
+
+ .about-box-main p{
+     padding-bottom: 3px;
+ }
  .noo-sh-title{
      font-size: 28px;
      text-transform: uppercase;
@@ -1567,9 +1572,7 @@
      font-weight: 700;
 	 margin-bottom: 0px;
 }
- .about-box-main p{
-     padding-bottom: 20px;
-}
+
  .service-block-inner {
      padding: 15px 20px;
      position: relative;
