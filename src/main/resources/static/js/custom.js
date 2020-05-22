@@ -259,7 +259,7 @@
                 'fog': "wi-day-fog",
                 'cloudy': "wi-cloudy",
                 'partly-cloudy-day': "wi-day-cloudy",
-                'partly-cloudy-night': "wi-night-alt-cloudy",
+                'partly-cloudy-night': "wi-night-cloudy",
                 'default': 'wi-cloud'
             };
             const iconMap = new Map(Object.entries(icons));

@@ -68,8 +68,8 @@
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item active"><a class="nav-link" href="/plants">Plants</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
                     <li class="nav-item"><a href="/plantList" class="nav-link ">Favorite Plants</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
                 </ul>
             </div>
@@ -110,8 +110,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="row special-list">
             <div class="col-md-6 special-grid">
                 <div class="products-single fix ">
@@ -137,6 +135,9 @@
                     </p>
                 </div>
             </div>
+        </div>
+        <div class="row to-list-page" style="display: none">
+            <h2 class="mx-auto">Glad you like it! You can download it from your <a href="/plantList">Favorite Plants List</a> and go purchasing some seeds!</h2>
         </div>
     </div>
 </div>
@@ -310,7 +311,7 @@
                         <h4>Information</h4>
                         <ul>
                             <li><a href="/about">About Us</a></li>
-                            <li><a href="/more#disclaimer">Copyright</a></li>
+                            <li><a href="/about#disclaimer">Copyright</a></li>
                         </ul>
                     </div>
                 </div>
@@ -569,6 +570,7 @@
                     if (pId === list[i].id) {
                         heart.show();
                         aTag.hide();
+                        $('.to-list-page').show();
                         return
                     }
                 }
@@ -581,7 +583,6 @@
 
             aTag.on('click', function (e) {
                 e.preventDefault();
-
                 let data = {'id': pId};
                 let info = {};
                 info['id'] = pId;
@@ -607,6 +608,7 @@
                     timeout: 60000,
                     success: function (data) {
                         heart.show();
+                        $('.to-list-page').show();
                     }
                 });
                 aTag.hide();

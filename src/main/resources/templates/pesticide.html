@@ -60,8 +60,8 @@
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/plants">Plants</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
                     <li class="nav-item"><a href="/plantList" class="nav-link ">Favorite Plants</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
                 </ul>
             </div>
@@ -116,6 +116,7 @@
                 </div>
                 <div class="products-single fix"  align="center">
                     <img src="/images/pest.png">
+                    <p>Source: https://sciencejournalforkids.org/articles/how-do-pesticides-get-into-honey/</p>
                 </div>
                 <div class="col-lg-6 mx-auto">
                     <h2>No idea what to search? <a href="#" class="pest-eg"><b>View Some Examples</b></a></h2>
@@ -272,7 +273,7 @@
                         <h4>Information</h4>
                         <ul>
                             <li><a href="/about">About Us</a></li>
-                            <li><a href="/more#disclaimer">Copyright</a></li>
+                            <li><a href="/about#disclaimer">Copyright</a></li>
                         </ul>
                     </div>
                 </div>
@@ -333,11 +334,11 @@
         })
 
         $('#form-submit').on('click', function (e) {
-            e.preventDefault();
             let param = $('.form-control').val().trim();
             if (param.length === 0) {
                 return;
             }
+            e.preventDefault();
             let data = {'param': param};
             getData(data);
         })

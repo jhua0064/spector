@@ -46,7 +46,7 @@
     padding-bottom: 20px;
 }
 
-.about-more a, .title-all p a, .title-all h1 a, .pest-weather a,.pest-eg{
+.about-more a, .title-all p a, .title-all h1 a, .pest-weather a,.pest-eg, .to-list-page a{
     color: #f4b860;
 }
 
@@ -145,7 +145,8 @@
 
 .pest-weather span{
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 18px;
+    color: #fac307;
 }
 
 .search-input{
@@ -291,6 +292,6 @@
 
 /*about us detail page*/
 #disclaimer{
-    height: 100px;
+    height: 60px;
 }
 

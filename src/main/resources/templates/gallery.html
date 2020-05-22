@@ -61,8 +61,8 @@
                 <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item active"><a class="nav-link" href="/plants">Plants</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
                     <li class="nav-item"><a href="/plantList" class="nav-link ">Favorite Plants</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pesticide">Avoid Pesticides</a></li>
                     <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
                 </ul>
             </div>
@@ -81,7 +81,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Grow bee friendly plants you like in your garden!</h2>
+                <h2>Plants - Grow bee friendly plants you like in your garden!</h2>
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active">Plants</li>
@@ -345,7 +345,7 @@
                         <h4>Information</h4>
                         <ul>
                             <li><a href="/about">About Us</a></li>
-                            <li><a href="/more#disclaimer">Copyright</a></li>
+                            <li><a href="/about#disclaimer">Copyright</a></li>
                         </ul>
                     </div>
                 </div>
@@ -596,6 +596,8 @@
                         buildGridWthNoResult();
                         return;
                     }
+                    $('.temp-msg').css('visibility', 'hidden');
+                    $('.temp-msg').css('height', '0');
                     buildGrid(plantData);
                 };
                 dealDataFromAjax("/plant/search", data, funcName);
