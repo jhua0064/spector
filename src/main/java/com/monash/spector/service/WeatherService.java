@@ -12,7 +12,7 @@ import tk.plogitech.darksky.forecast.model.Longitude;
  * get weather data from dark-sky api
  */
 public class WeatherService {
-    final private static String API_KEY =  "6f767f9db62b02dd0ebe2b69013f4212";
+    final private static String API_KEY =  "Put your api key here";
 
     private static WeatherService weatherService = null;
 
