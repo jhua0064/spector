@@ -35,6 +35,7 @@ public class AccessFilter implements Filter {
         }
 
         HttpSession session = request.getSession();
+        session.setMaxInactiveInterval(30*60);
         String pwd = request.getParameter("pwd");
         if(pwd != null && pwd.equals("E12")){
             session.setAttribute("accessAllowed",true);

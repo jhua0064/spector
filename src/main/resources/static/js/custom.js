@@ -272,7 +272,7 @@
                 let current = data['currently'];
                 $('.current .icon p').text(current['summary']);
                 $('.current .icon span').addClass(iconMap.get(current['icon']))
-                $('.current .temp span').html(current['temperature'] + "&deg;");
+                $('.current .temp span').html(Math.round(parseFloat(current['temperature'])) + "&deg;");
                 $('.current .wind .wind-val').text(current['windSpeed']);
                 $('.current .wind .humid').text(current['humid']);
                 $('.current .wind .pressure').text(current['pressure']);
@@ -284,7 +284,9 @@
                     let date = new Date(Number(datWeather['time'] + '000')).toDateString().substring(0, 3);
                     $('h3', this).text(date);
                     $('span', this).addClass(iconMap.get(datWeather['icon']));
-                    $('.temp', this).html(datWeather['temperatureLow'] + '&deg; - ' + datWeather['temperatureHigh'] + "&deg;")
+                    let temLow = Math.round(parseFloat(datWeather['temperatureLow']));
+                    let temHigh = Math.round(parseFloat(datWeather['temperatureHigh']))
+                    $('.temp', this).html(temLow + '&deg; - ' + temHigh + "&deg;")
                     i += 1
                 })
 
@@ -304,7 +306,7 @@
 
                     $('.current-wind').text(wind);
                     $('.wind-msg').text(windTxt);
-                    $('.current-temp').text(temp);
+                    $('.current-temp').text(Math.round(temp));
                     $('.temp-msg').text(tempTxt);
                 }
             }

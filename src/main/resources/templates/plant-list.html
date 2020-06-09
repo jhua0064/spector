@@ -96,8 +96,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
-                        <h1>You have not chosen any plants yet !</h1>
-                        <h1>Start from our suggestions and explore more by yourselves</h1>
+                        <h1 style="color:#ff3019;">You have not chosen any plants yet! <br>  Start from our suggestions and explore more</h1>
                     </div>
                 </div>
             </div>
@@ -105,8 +104,8 @@
                 <div class="col-lg-12">
                     <div class="special-menu text-center recommendation">
                         <div class="button-group filter-button-group">
-                            <button data-filter=".top-featured">User's Top Selection</button>
-                            <button data-filter=".best-seller">Our Best Recommendation</button>
+                            <button data-filter=".top-featured">Frequently Selected Plants</button>
+                            <button data-filter=".best-seller">Experts Recommendation</button>
                         </div>
                     </div>
                 </div>
@@ -115,16 +114,16 @@
                 <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="/images/gallery-img-2299.jpg" class="img-fluid" alt="Image">
+                            <img src="/images/gallery-img-819.jpg" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="/detail/2299" data-toggle="tooltip" data-placement="right" title="View Detail"><i
+                                    <li><a href="/detail/819" data-toggle="tooltip" data-placement="right" title="View Detail"><i
                                             class="fas fa-eye"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="why-text">
-                            <h4>Sarsaparilla Vine</h4>
+                            <h4>Tea Tree</h4>
                         </div>
                     </div>
                 </div>
@@ -166,16 +165,16 @@
                 <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="/images/gallery-img-3673.jpg" class="img-fluid" alt="Image">
+                            <img src="/images/gallery-img-996.jpg" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="/detail/3673" data-toggle="tooltip" data-placement="right" title="View Detail"><i
+                                    <li><a href="/detail/996" data-toggle="tooltip" data-placement="right" title="View Detail"><i
                                             class="fas fa-eye"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="why-text">
-                            <h4>Blue Stars</h4>
+                            <h4>Weeping Bottlebrush</h4>
                         </div>
                     </div>
                 </div>
@@ -183,7 +182,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
-                        <h1>You can even find more plants on our <a href="/plants">PLANT GALLERY !</a></h1>
+                        <h1>You can even find more plants in our <a href="/plants">PLANT GALLERY !</a></h1>
                     </div>
                 </div>
             </div>
@@ -192,7 +191,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-all text-center" style="position: relative">
-                    <h1 class="guide-msg">Here are all bee friendly plants you like</h1>
+                    <h1 class="guide-msg">Check and download all selected plants for reference if needed</h1>
                     <div  style="float: right; background-color: #ffc107;margin-bottom: 5%" id="download-list">
                         <a href="#" style="padding: 5px; font-size: 28px; " id="cmd" data-toggle="tooltip" title="download as pdf">
                             <i class="fa fa-download"></i>
@@ -269,11 +268,8 @@
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-widget">
                         <h4>About Beeprotector</h4>
-                        <p>Australian native bees are under threat, in spite of the beauty and value of these remarkable
-                            insects. Our native bees delight observant gardeners with their dazzling colours and their
-                            fascinating behaviour. </p>
-                        <p>Our native bees are also vital pollinators --- they help our wildflowers to survive and
-                            increase the yield of many of our agricultural crops.</p>
+                        <p>BeeProtector is a website that assists Victorians to transform their backyards into
+                            eco-friendly gardens suitable for attracting bees and forming bee habitats. </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
@@ -375,18 +371,28 @@
             '                            <p>\n' +
             '                                <label class="list-title">Water Level:</label> <span>' + guide.waterNeed + '</span><br>\n' +
             '                                <label class="list-title">Light Level:</label> <span>' + guide.lightNeed + ' </span> <br>\n' +
-            '                                <label class="list-title">Soil Type:</label> <span>' + guide.soilType + ' </span>\n' +
-            '                                <label class="list-title">Soil Condition:</label> <span>' + guide.soilAdd + '</span>\n' +
+            '                                <label class="list-title">Soil Type:</label> <span >' + guide.soilType + ' </span>\n' +
+            '                                <label class="list-title soil'+guide.id+'">Soil Condition: </label> <span class="soil'+guide.id+'">' + guide.soilAdd + '</span> \n' +
             '                            </p>\n' +
             '                            <p>\n' +
-            '                                <label class="list-title">Height Range:</label> <span>' + guide.hRange + '</span>\n' +
-            '                                <label class="list-title">Spread Range:</label> <span>' + guide.sRange + ' </span> <br> \n' +
+            '                                <label class="list-title hRange'+guide.id+'">Height Range:</label> <span class="hRange'+guide.id+'">' + guide.hRange + '</span> \n' +
+            '                                <label class="list-title sRange'+guide.id+'">Spread Range:</label> <span class="sRange'+guide.id+'">' + guide.sRange + ' </span>  <br> \n' +
             '                                <label class="list-title">Climate:</label> <span>' + guide.climate + ' </span> <br>\n' +
             '                                <label class="list-title">Maintenance:</label> <span>' + guide.maintenance + ' </span> <br>\n' +
             '                            </p>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
             '                </div>')
+        if(guide.soilAdd === "n"){
+            $('.soil'+guide.id).hide();
+        }
+        if(guide.hRange === "n"){
+            $('.hRange'+guide.id).hide();
+        }
+        if(guide.sRange === "n"){
+            $('.sRange'+guide.id).hide();
+        }
+
     }
 
     // delete plant from list
